@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>AM Field System</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow+Condensed:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  :root {
+    --red:#d9001f; --red-deep:#8b0a1f; --gold:#ffc727;
+    --black:#080808; --dark:#111; --panel:#181818;
+    --border:#252525; --text:#e8e8e8; --muted:#666;
+  }
+  html,body { height:100%; overflow:hidden; }
+  body { background:var(--black); color:var(--text); font-family:'Barlow Condensed',sans-serif; display:flex; flex-direction:column; }
+  .hdr { background:linear-gradient(135deg,#0d0d0d 0%,#1a0000 100%); border-bottom:2px solid var(--red); padding:10px 16px; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+  .hdr-left { display:flex; align-items:center; gap:10px; }
+  .hdr-icon { width:34px; height:34px; background:linear-gradient(135deg,var(--red) 0%,var(--red-deep) 100%); display:flex; align-items:center; justify-content:center; }
+  .hdr-icon svg { width:18px; height:18px; color:#fff; }
+  .hdr-title { font-family:'Oswald',sans-serif; font-weight:700; font-size:17px; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+  .hdr-title .red { color:var(--red); }
+  .hdr-sub { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:3px; color:var(--muted); text-transform:uppercase; margin-top:3px; }
+  .hdr-right { display:flex; align-items:center; gap:8px; }
+  .status-dot { width:8px; height:8px; border-radius:50%; background:#22aa44; box-shadow:0 0 8px #22aa44; animation:blink 2s infinite; }
+  .status-dot.busy { background:var(--gold); box-shadow:0 0 8px var(--gold); }
+  .status-dot.err { background:var(--red); box-shadow:0 0 8px var(--red); animation:none; }
+  @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+  .status-lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--muted); text-transform:uppercase; }
+  .clear-btn { background:none; border:1px solid #2a2a2a; color:var(--muted); padding:4px 8px; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; text-transform:uppercase; transition:all .2s; }
+  .clear-btn:hover { border-color:var(--red); color:var(--red); }
+  .quick-bar { background:var(--dark); border-bottom:1px solid var(--border); padding:8px 12px; flex-shrink:0; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+  .quick-bar::-webkit-scrollbar { display:none; }
+  .quick-inner { display:flex; gap:8px; width:max-content; }
+  .qbtn { background:var(--panel); border:1px solid var(--border); color:var(--text); padding:6px 13px; font-family:'Rajdhani',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px; white-space:nowrap; cursor:pointer; transition:all .15s; }
+  .qbtn:active,.qbtn:hover { background:var(--red); border-color:var(--red); }
+  .chat { flex:1; overflow-y:auto; padding:14px 12px; display:flex; flex-direction:column; gap:12px; -webkit-overflow-scrolling:touch; }
+  .chat::-webkit-scrollbar { width:3px; }
+  .chat::-webkit-scrollbar-thumb { background:#2a2a2a; }
+  .msg { display:flex; flex-direction:column; gap:3px; max-width:92%; }
+  .msg.user { align-self:flex-end; align-items:flex-end; }
+  .msg.assistant { align-self:flex-start; align-items:flex-start; }
+  .msg-lbl { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:2px; color:var(--muted); text-transform:uppercase; padding:0 4px; }
+  .bubble { padding:11px 15px; font-size:15px; line-height:1.55; letter-spacing:0.2px; }
+  .msg.user .bubble { background:linear-gradient(135deg,var(--red) 0%,var(--red-deep) 100%); color:#fff; border-radius:12px 12px 2px 12px; }
+  .msg.assistant .bubble { background:var(--panel); border:1px solid var(--border); color:var(--text); border-radius:2px 12px 12px 12px; white-space:pre-wrap; }
+  .typing-wrap { align-self:flex-start; background:var(--panel); border:1px solid var(--border); padding:13px 18px; border-radius:2px 12px 12px 12px; display:none; }
+  .typing-wrap.show { display:flex; align-items:center; gap:5px; }
+  .typing-wrap span { width:6px; height:6px; border-radius:50%; background:var(--muted); animation:dot 1.2s infinite; }
+  .typing-wrap span:nth-child(2) { animation-delay:.2s; }
+  .typing-wrap span:nth-child(3) { animation-delay:.4s; }
+  @keyframes dot { 0%,60%,100%{transform:translateY(0);} 30%{transform:translateY(-5px);} }
+  .welcome { align-self:center; text-align:center; padding:20px 10px; display:flex; flex-direction:column; align-items:center; gap:12px; }
+  .welcome-icon { width:52px; height:52px; border-radius:50%; background:linear-gradient(135deg,var(--red) 0%,var(--red-deep) 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 0 24px rgba(217,0,31,0.5); }
+  .welcome-icon svg { width:26px; height:26px; color:#fff; }
+  .welcome h3 { font-family:'Oswald',sans-serif; font-weight:700; font-size:18px; text-transform:uppercase; letter-spacing:1px; }
+  .welcome h3 .red { color:var(--red); }
+  .welcome p { font-size:13px; color:var(--muted); max-width:240px; line-height:1.5; }
+  .welcome-hint { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:#333; text-transform:uppercase; }
+  .input-row { background:var(--dark); border-top:1px solid var(--border); padding:10px 12px; display:flex; gap:8px; align-items:flex-end; flex-shrink:0; padding-bottom:max(10px,env(safe-area-inset-bottom)); }
+  textarea { flex:1; background:var(--panel); border:1px solid var(--border); padding:11px 13px; color:var(--text); font-family:'Barlow Condensed',sans-serif; font-size:16px; resize:none; outline:none; min-height:44px; max-height:120px; border-radius:4px; line-height:1.4; transition:border-color .2s; -webkit-appearance:none; }
+  textarea:focus { border-color:var(--red); }
+  textarea::placeholder { color:#333; }
+  .send { width:44px; height:44px; background:var(--red); border:0; border-radius:4px; cursor:pointer; flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:all .15s; }
+  .send:active { background:var(--red-deep); transform:scale(0.94); }
+  .send:hover { background:#ff1a3d; }
+  .send:disabled { background:#2a2a2a; cursor:not-allowed; }
+  .send svg { width:20px; height:20px; color:#fff; }
+  .send:disabled svg { opacity:0.3; }
+
+/* PIN SCREEN */
+.pin-screen { position:fixed; inset:0; z-index:500; background:var(–black); display:flex; align-items:center; justify-content:center; padding:20px; }
+.pin-card { background:var(–panel); border:1px solid var(–border); border-top:3px solid var(–red); padding:32px 24px; width:100%; max-width:320px; display:flex; flex-direction:column; align-items:center; gap:20px; transition:transform .08s; }
+.pin-logo { font-family:‘Oswald’,sans-serif; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:1px; }
+.pin-logo .red { color:var(–red); }
+.pin-sub { font-family:‘JetBrains Mono’,monospace; font-size:9px; letter-spacing:3px; color:var(–muted); text-transform:uppercase; margin-top:-12px; }
+.pin-dots { display:flex; gap:14px; }
+.pin-dot { width:14px; height:14px; border-radius:50%; border:2px solid #333; transition:all .15s; }
+.pin-dot.filled { background:var(–red); border-color:var(–red); box-shadow:0 0 8px rgba(217,0,31,0.6); }
+.pin-pad { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; width:100%; }
+.pin-key { background:var(–dark); border:1px solid var(–border); color:var(–text); padding:16px 0; font-family:‘Oswald’,sans-serif; font-weight:600; font-size:22px; text-align:center; cursor:pointer; transition:all .1s; user-select:none; }
+.pin-key:active { background:var(–red); border-color:var(–red); transform:scale(0.95); }
+.pin-key.del { font-family:‘JetBrains Mono’,monospace; font-size:16px; color:var(–muted); }
+.pin-key.zero { grid-column:2; }
+.pin-err { font-family:‘JetBrains Mono’,monospace; font-size:10px; letter-spacing:2px; color:var(–red); text-transform:uppercase; height:14px; }
+</style>
+
+</head>
+<body>
+
+<!-- PIN SCREEN -->
+
+<div class="pin-screen" id="pinScreen">
+  <div class="pin-card" id="pinCard">
+    <div class="pin-logo">AUTO<span class="red">MEDIC</span></div>
+    <div class="pin-sub">FIELD SYSTEM · PRIVATE</div>
+    <div class="pin-dots">
+      <div class="pin-dot" id="d0"></div>
+      <div class="pin-dot" id="d1"></div>
+      <div class="pin-dot" id="d2"></div>
+      <div class="pin-dot" id="d3"></div>
+    </div>
+    <div class="pin-err" id="pinErr"></div>
+    <div class="pin-pad">
+      <div class="pin-key" onclick="pp('1')">1</div>
+      <div class="pin-key" onclick="pp('2')">2</div>
+      <div class="pin-key" onclick="pp('3')">3</div>
+      <div class="pin-key" onclick="pp('4')">4</div>
+      <div class="pin-key" onclick="pp('5')">5</div>
+      <div class="pin-key" onclick="pp('6')">6</div>
+      <div class="pin-key" onclick="pp('7')">7</div>
+      <div class="pin-key" onclick="pp('8')">8</div>
+      <div class="pin-key" onclick="pp('9')">9</div>
+      <div class="pin-key del" onclick="pd()">⌫</div>
+      <div class="pin-key zero" onclick="pp('0')">0</div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+
+<div class="hdr">
+  <div class="hdr-left">
+    <div class="hdr-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-5 4 10 2-5h4l2 3h2"/></svg>
+    </div>
+    <div>
+      <div class="hdr-title">AUTO<span class="red">MEDIC</span> FIELD</div>
+      <div class="hdr-sub">DIAGNOSTIC SYSTEM · PRIVATE</div>
+    </div>
+  </div>
+  <div class="hdr-right">
+    <div class="status-dot" id="dot"></div>
+    <span class="status-lbl" id="sLbl">READY</span>
+    <button class="clear-btn" onclick="clearChat()">CLEAR</button>
+  </div>
+</div>
+
+<!-- QUICK PROMPTS -->
+
+<div class="quick-bar">
+  <div class="quick-inner">
+    <button class="qbtn" onclick="q('What does DTC ')">🔍 CODE</button>
+    <button class="qbtn" onclick="q('Cranks no start — vehicle: ')">🔑 NO START</button>
+    <button class="qbtn" onclick="q('Normal live data values for ')">📊 LIVE DATA</button>
+    <button class="qbtn" onclick="q('Fuel trim diagnosis — STFT: __ LTFT: __ — what does this tell me?')">⛽ FUEL TRIMS</button>
+    <button class="qbtn" onclick="q('Rough idle diagnosis steps for ')">🔧 ROUGH IDLE</button>
+    <button class="qbtn" onclick="q('Misfire on cylinder — vehicle: ')">💥 MISFIRE</button>
+    <button class="qbtn" onclick="q('Battery and charging diagnosis — voltage reading: ')">🔋 CHARGING</button>
+    <button class="qbtn" onclick="q('What bi-directional tests should I run for ')">⚡ BI-DIR</button>
+    <button class="qbtn" onclick="q('Vacuum leak vs fuel delivery — current symptoms: ')">💨 VAC LEAK</button>
+    <button class="qbtn" onclick="q('EGR diagnosis steps for ')">🌀 EGR</button>
+    <button class="qbtn" onclick="q('MAP and MAF sensor values to expect on ')">📡 MAP/MAF</button>
+    <button class="qbtn" onclick="q('Overheating diagnosis — ')">🌡 OVERHEAT</button>
+  </div>
+</div>
+
+<!-- CHAT -->
+
+<div class="chat" id="chat">
+  <div class="welcome" id="welcome">
+    <div class="welcome-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </div>
+    <h3>AUTO<span class="red">MEDIC</span> FIELD</h3>
+    <p>Ask any diagnostic question. Tap a quick prompt or type below.</p>
+    <div class="welcome-hint">▸ PRIVATE · FIELD USE ONLY</div>
+  </div>
+  <div class="typing-wrap" id="typing"><span></span><span></span><span></span></div>
+</div>
+
+<!-- INPUT -->
+
+<div class="input-row">
+  <textarea id="inp" placeholder="Ask a diagnostic question..." rows="1" onkeydown="hk(event)" oninput="rz(this)"></textarea>
+  <button class="send" id="sendBtn" onclick="send()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+  </button>
+</div>
+
+<script>
+// ============================================================
+// CHANGE THIS PIN TO WHATEVER 4-DIGIT NUMBER YOU WANT
+const PIN = '1871';
+// ============================================================
+
+// ============================================================
+// PASTE YOUR ANTHROPIC API KEY HERE BETWEEN THE QUOTES
+// Get one at console.anthropic.com
+const API_KEY = '';
+// ============================================================
+
+// PIN LOGIC
+let pe = '';
+const ps = document.getElementById('pinScreen');
+const pc = document.getElementById('pinCard');
+
+function pp(d) {
+  if (pe.length >= 4) return;
+  pe += d;
+  ud();
+  if (pe.length === 4) setTimeout(cp, 120);
+}
+function pd() {
+  pe = pe.slice(0,-1);
+  ud();
+  document.getElementById('pinErr').textContent = '';
+}
+function ud() {
+  for (let i=0;i<4;i++) document.getElementById('d'+i).classList.toggle('filled', i < pe.length);
+}
+function cp() {
+  if (pe === PIN) {
+    ps.style.display='none';
+    sessionStorage.setItem('ok','1');
+  } else {
+    pe=''; ud();
+    document.getElementById('pinErr').textContent='INCORRECT PIN';
+    pc.style.transform='translateX(-10px)';
+    setTimeout(()=>pc.style.transform='translateX(10px)',80);
+    setTimeout(()=>pc.style.transform='translateX(-6px)',160);
+    setTimeout(()=>pc.style.transform='translateX(0)',240);
+  }
+}
+window.addEventListener('load',()=>{ if(sessionStorage.getItem('ok')==='1') ps.style.display='none'; });
+window.addEventListener('keydown',e=>{
+  if(ps.style.display==='none') return;
+  if(/^[0-9]$/.test(e.key)) pp(e.key);
+  if(e.key==='Backspace') pd();
+});
+
+// CHAT LOGIC
+const hist = [];
+const SYS = `You are an expert automotive diagnostic technician assistant helping a professional mobile tech in the field at a vehicle. Be concise, bulleted where possible, specific with values and specs. Lead with the most important thing first. No filler. Think like a senior tech talking to another tech.`;
+
+function rz(el) { el.style.height='auto'; el.style.height=Math.min(el.scrollHeight,120)+'px'; }
+function hk(e) { if(e.key==='Enter'&&!e.shiftKey&&innerWidth>600){e.preventDefault();send();} }
+
+function ss(state) {
+  const d=document.getElementById('dot'), l=document.getElementById('sLbl');
+  d.className='status-dot';
+  if(state==='busy'){d.classList.add('busy');l.textContent='THINKING';}
+  else if(state==='err'){d.classList.add('err');l.textContent='ERROR';}
+  else l.textContent='READY';
+}
+
+function am(role,text) {
+  const w=document.getElementById('welcome'); if(w) w.remove();
+  const chat=document.getElementById('chat'), typing=document.getElementById('typing');
+  const d=document.createElement('div'); d.className='msg '+role;
+  const lb=document.createElement('div'); lb.className='msg-lbl'; lb.textContent=role==='user'?'YOU':'SYSTEM';
+  const b=document.createElement('div'); b.className='bubble'; b.textContent=text;
+  d.appendChild(lb); d.appendChild(b);
+  chat.insertBefore(d,typing);
+  chat.scrollTop=chat.scrollHeight;
+}
+
+function st(show) {
+  document.getElementById('typing').className='typing-wrap'+(show?' show':'');
+  if(show) document.getElementById('chat').scrollTop=document.getElementById('chat').scrollHeight;
+}
+
+function q(t) {
+  const i=document.getElementById('inp'); i.value=t; rz(i); i.focus();
+  i.selectionStart=i.selectionEnd=i.value.length;
+}
+
+function clearChat() {
+  hist.length=0;
+  document.getElementById('chat').innerHTML=`<div class="welcome" id="welcome"><div class="welcome-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>AUTO<span class="red">MEDIC</span> FIELD</h3><p>Ask any diagnostic question. Tap a quick prompt or type below.</p><div class="welcome-hint">▸ PRIVATE · FIELD USE ONLY</div></div><div class="typing-wrap" id="typing"><span></span><span></span><span></span></div>`;
+  ss('ready');
+}
+
+async function send() {
+  const inp=document.getElementById('inp');
+  const text=inp.value.trim(); if(!text) return;
+
+  const key = API_KEY || localStorage.getItem('am_k') || '';
+  if (!key) {
+    const k = prompt('Enter Anthropic API key (sk-ant-...):');
+    if (k && k.startsWith('sk-ant')) { localStorage.setItem('am_k', k); location.reload(); }
+    return;
+  }
+
+  inp.value=''; inp.style.height='auto';
+  document.getElementById('sendBtn').disabled=true;
+  ss('busy'); am('user',text);
+  hist.push({role:'user',content:text}); st(true);
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json',
+        'anthropic-version':'2023-06-01',
+        'anthropic-dangerous-direct-browser-access':'true',
+        'x-api-key': key
+      },
+      body: JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1024,
+        system: SYS,
+        messages: hist
+      })
+    });
+
+    const raw = await res.text();
+    let data;
+    try { data=JSON.parse(raw); } catch(e) { throw new Error('Parse error: '+raw.slice(0,80)); }
+    if (!res.ok) throw new Error(data?.error?.message || 'HTTP '+res.status);
+    if (!data?.content?.[0]?.text) throw new Error('Empty response — check billing at console.anthropic.com');
+
+    const reply=data.content[0].text;
+    hist.push({role:'assistant',content:reply});
+    st(false); am('assistant',reply); ss('ready');
+
+  } catch(err) {
+    st(false); am('assistant','⚠ '+err.message); ss('err'); hist.pop();
+  }
+
+  document.getElementById('sendBtn').disabled=false;
+  document.getElementById('chat').scrollTop=document.getElementById('chat').scrollHeight;
+}
+</script>
+
+</body>
+</html>
