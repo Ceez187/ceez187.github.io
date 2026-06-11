@@ -1,0 +1,2182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="no">
+<link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCABAAEADASIAAhEBAxEB/8QAHAAAAQQDAQAAAAAAAAAAAAAAAAIDBgcBBAUI/8QALRAAAQMDAwMCBQUBAAAAAAAAAQIDBAAFERIhMQYHEyJRFCMyQWEIQ3GBkVL/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAwQFAgH/xAAnEQACAgIABAUFAAAAAAAAAAAAAQIRAwQSFDFRBSFBYXEikaHB8P/aAAwDAQACEQMRAD8A83UUUUAUUU7HjrkPttoGPIsIBPAJOBToexi5OkNUV1HIlrDimRIktKBKQ842C2oj8DcD/a0ZUV2G+WngArAIIOQoHgg/cGuVJMmyYJ41b817O/79+gzRRRXRAKQElaQtRSkncgZwKux79M14l2lu59P9SWu7Q3W/K0spW35E4yMYChn+6pGrR7O9zYXRsl613m3ql2+a6gpdQ+WlR1cE5yBpOcnjGM0A9cezRt3bRPUEtVyt89h5tEhuS02pl1C051MlCjqAyNyd99hUfgdUWK3xQ0zEfSMJ1ENAalAYzzzV+d2LFGh9AyJEC23GClx1KlBM/wAsd3VnGW9ahycggDevMUNubGQpK7c8sAakpLBwVcDO2+xP+1XyxU3Ujc8O2MmrBZMKVttXV9Evt1ZILn1JZJzC48iG+FpCgkqaGW1Ec4zzUni9o3br2qavEc3G4zi88mKiM02lpltPqJeUtQIBweM4J4NVo+zcZOddvcKjyoMHUfyTivUfaqwxZfQMaVPttxnJbdWpIXP8UdrSd8N60gYIySQTn70xwjB0j3f28u1CWXKqdpXVWvN0+/RFcNfplvEK1OXPqHqS1WmGy2XXVhK3fGkDJzkJGf7qklhIWQk6kg7EjGRVn94e5sLrSSzbLNb1w7fCcWVOLfLipCuAeSNIxtznOaq+rBhBXUj9M3mV03K6gYtzy7TEcS09KA9CFEgAfn6hx7j3rljnerTgd4bfAhptCekYy7IxFRHYZMhYeJDqHSpa/pVqWjJwgHcDOBQHA6Y6j6rlhvp4TbtNtISryQUFbjaUoSVbo/5TgKI22FIkdSz40llNvSJDS0pbUSwUNuO5OdA2x9hj3BOBVhR+58hgSlWyw3OMxdvjJDrjV0QHy/JU1hwEIAGgABII2Cs52pi9dwbnd4MqGxYpoVODCFsP3EOsM+A/sN6RpUtaclRJJ3xzmuJxUo01Za1NieDKpQm492uxCo15usqdMYuDaY/w7JUfla22lZBCljOSMZxzznG1aV562v0mM9ZYd3uLdj+luEHFJb0/cac/STk4Oea3W5dyaa8i7e2oBkLeJeT8zRpKlH39OMD2JND8+Y2h5x2MoNN4y4iSkKGCFFOoDg6htUMOOCpRNXZ5XZlx5Nht+6b+O3p+SIybdLiKCX2VIUc4GxO2M8fyK1qkb/VSZCHElh5lSt9bLwSrOpSiM44JI/yo6SVKJJyTuSalg5NfUqM3bx68JLl58S+OhiiiipCkL87pAHlXgDSBqPHtWfiHiAPM5gHI9R2NN0UA553tOnyrxp041Hj2/iseZ0avmL9QIPqO9IooAooooD//2Q==">
+<link rel="apple-touch-icon" href="data:image/jpeg;base64,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">
+<title>AutoMedic Pinpoint Pro V42</title>
+<style>
+:root{--red:#ff1238;--black:#05070c;--panel:#0b101b;--panel2:#111827;--line:rgba(255,255,255,.14);--text:#f8fafc;--muted:#94a3b8;--blue:#00c8ff;--green:#17e889;--amber:#ffd05a;--bad:#ff5572;--white:#fff}
+*{box-sizing:border-box}html,body{margin:0;background:#03050a;color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%;scroll-behavior:smooth}body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 18% 0%,rgba(255,18,56,.28),transparent 30%),radial-gradient(circle at 82% 0%,rgba(0,200,255,.22),transparent 34%),linear-gradient(180deg,#07101c 0%,#03050a 58%,#000 100%)}body:after{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(180deg,rgba(0,0,0,.7),rgba(0,0,0,.06))}.app{max-width:1320px;margin:0 auto;padding:10px 12px 86px}.top{position:sticky;top:0;z-index:40;display:grid;grid-template-columns:70px 1fr auto;gap:12px;align-items:center;padding:12px;border:1px solid rgba(0,200,255,.26);border-radius:22px;background:linear-gradient(135deg,rgba(7,10,18,.97),rgba(14,19,32,.88));box-shadow:0 18px 55px rgba(0,0,0,.45),0 0 26px rgba(0,200,255,.07);backdrop-filter:blur(16px);will-change:transform,padding}.top.shrink{grid-template-columns:48px 1fr auto;padding:7px 10px;border-radius:0 0 18px 18px}.logo{width:70px;height:70px;border-radius:20px;background:#000;display:grid;place-items:center;overflow:hidden;box-shadow:0 0 0 3px rgba(255,255,255,.10),0 0 30px rgba(255,18,56,.24),0 0 24px rgba(0,200,255,.14)}.logo img{width:100%;height:100%;object-fit:contain;display:block;padding:4px;background:#000}.top.shrink .logo{width:48px;height:48px;border-radius:15px}h1{margin:0;font-size:25px;line-height:1.05}.top.shrink h1{font-size:18px}.tag{font-weight:1000;color:white}.sub{color:var(--muted);font-size:12px;margin-top:3px}.top.shrink .sub{display:none}.readyDot{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;border:1px solid rgba(23,232,137,.35);background:rgba(23,232,137,.1);color:#bbf7d0;font-weight:1000;font-size:12px;text-align:center}.top.shrink .readyDot{width:44px;height:44px;font-size:10px}.nav{position:sticky;top:96px;z-index:30;display:flex;gap:8px;overflow:auto;padding:10px 0;background:rgba(3,5,10,.72);backdrop-filter:blur(12px)}.top.shrink+.nav{top:64px}.nav button,.bottomBar button,.btn{border:0;border-radius:15px;min-height:44px;padding:11px 13px;font-weight:1000;color:white;background:rgba(255,255,255,.08);border:1px solid var(--line);cursor:pointer}.nav button{white-space:nowrap}.nav button.active,.btn.red{background:linear-gradient(135deg,var(--red),#8b0018);border-color:rgba(255,18,56,.55)}.btn.blue,.nav button.blue{background:linear-gradient(135deg,var(--blue),#0b5b85);border-color:rgba(0,200,255,.45)}.btn.green,.nav button.green{background:linear-gradient(135deg,var(--green),#08723f);border-color:rgba(23,232,137,.45);color:#04110b}.btn.ghost{background:rgba(255,255,255,.07)}.btn.amber{background:linear-gradient(135deg,var(--amber),#b47d00);color:#111}.tab{display:none}.tab.active{display:block}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.wide{grid-column:1/-1}.card,details{border:1px solid var(--line);border-radius:22px;padding:14px;background:linear-gradient(180deg,rgba(12,17,28,.96),rgba(4,7,14,.98));box-shadow:0 18px 50px rgba(0,0,0,.34)}.brandCard{border:2px solid rgba(0,200,255,.32);background:linear-gradient(135deg,rgba(0,200,255,.1),rgba(255,18,56,.065),rgba(10,15,27,.98))}.redCard{border:2px solid rgba(255,18,56,.32);background:linear-gradient(135deg,rgba(255,18,56,.1),rgba(10,15,27,.98))}.greenCard{border:2px solid rgba(23,232,137,.32);background:linear-gradient(135deg,rgba(23,232,137,.08),rgba(10,15,27,.98))}.sectionTitle{font-size:11px;font-weight:1000;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}h2{margin:0 0 10px;font-size:20px;display:flex;gap:8px;align-items:center}.badge{display:inline-grid;place-items:center;min-width:29px;height:29px;border-radius:999px;background:var(--red);font-size:12px;font-weight:1000}.badge.blue{background:var(--blue);color:#001}.badge.green{background:var(--green);color:#001}.badge.amber{background:var(--amber);color:#111}.hint,.mini{font-size:12px;line-height:1.38;color:var(--muted)}label{display:block;margin:9px 0 5px;font-size:12px;font-weight:1000;color:#cbd5e1}input,select,textarea{width:100%;min-height:46px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.085);color:#fff;padding:12px;font-size:16px;outline:none;-webkit-user-select:text;user-select:text}textarea{min-height:94px;resize:vertical}select option{background:#fff;color:#111}input:focus,textarea:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,200,255,.18)}.vinLine{display:grid;grid-template-columns:1fr 190px;gap:8px}.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.ok,.warn,.bad{border-radius:15px;padding:11px;margin:10px 0;font-weight:800;font-size:13px;line-height:1.4}.ok{background:rgba(23,232,137,.12);border:1px solid rgba(23,232,137,.3);color:#bbf7d0}.warn{background:rgba(255,208,90,.12);border:1px solid rgba(255,208,90,.35);color:#fef3c7}.bad{background:rgba(255,85,114,.12);border:1px solid rgba(255,85,114,.35);color:#fecdd3}.workflow{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}.flowStep{padding:12px;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:17px;background:rgba(255,255,255,.06);text-align:left;color:#fff}.flowStep.active{border-left-color:var(--blue);background:linear-gradient(135deg,rgba(0,200,255,.15),rgba(255,18,56,.08))}.flowStep b{display:block;font-size:13px;margin-bottom:4px}.flowStep span{font-size:11px;color:#a7b3c7}.num{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:999px;margin-right:5px;background:rgba(255,255,255,.12);color:#fff}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.kpi{border:1px solid var(--line);border-radius:16px;padding:10px;background:rgba(0,0,0,.26);text-align:center}.kpi b{display:block;font-size:24px;color:var(--blue)}.kpi span{font-size:11px;color:var(--muted)}.progress{height:13px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--amber),var(--green));transition:.35s}.bigAnswer{font-size:25px;font-weight:1000;line-height:1.06;margin:10px 0}.conf{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(23,232,137,.13);border:1px solid rgba(23,232,137,.4);color:#bbf7d0;font-weight:1000}.chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.chip{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line);font-size:12px;font-weight:900}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:16px;margin-top:10px}table{width:100%;border-collapse:collapse;background:rgba(0,0,0,.22)}td,th{padding:9px;border-bottom:1px solid rgba(255,255,255,.08);font-size:12px;text-align:left;vertical-align:top}th{background:rgba(255,255,255,.08)}pre{white-space:pre-wrap;background:rgba(0,0,0,.45);border:1px solid var(--line);border-radius:16px;padding:14px;min-height:170px;overflow:auto;color:#e5e7eb}.snapGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.snap{border:1px solid var(--line);border-radius:17px;padding:12px;background:rgba(255,255,255,.06)}.snap span{display:block;color:var(--muted);font-size:11px;font-weight:900}.snap b{font-size:20px}.fuelFlow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch}.fuelStage{border:1px solid rgba(0,200,255,.26);border-radius:18px;padding:12px;background:rgba(0,200,255,.06)}.fuelStage h3{margin:0 0 8px;color:#eaf9ff}.trimGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.arrow{display:grid;place-items:center;font-size:28px;color:var(--blue);font-weight:1000}.trimResult{border-radius:16px;padding:12px;margin-top:10px;font-weight:900}.trimResult.good{background:rgba(23,232,137,.1);border:1px solid rgba(23,232,137,.3);color:#bbf7d0}.trimResult.warnx{background:rgba(255,208,90,.12);border:1px solid rgba(255,208,90,.35);color:#fef3c7}.trimResult.badx{background:rgba(255,85,114,.13);border:1px solid rgba(255,85,114,.35);color:#fecdd3}.aiGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.aiBox{border:1px solid rgba(0,200,255,.28);border-radius:18px;padding:13px;background:linear-gradient(135deg,rgba(0,200,255,.075),rgba(255,18,56,.045))}.aiBox h3{margin:0 0 8px;color:var(--blue)}.bottomBar{position:fixed;left:10px;right:10px;bottom:10px;z-index:50;display:flex;gap:8px;overflow:auto;justify-content:center;padding:8px;border:1px solid rgba(0,200,255,.24);border-radius:20px;background:rgba(3,5,10,.86);backdrop-filter:blur(14px);box-shadow:0 12px 35px rgba(0,0,0,.5)}.bottomBar button{font-size:12px;white-space:nowrap}.hidden{display:none!important}.lastVinBox{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px;border:1px solid rgba(0,200,255,.22);border-radius:15px;background:rgba(0,200,255,.06);margin-top:8px}.statusLine{font-size:12px;color:#dff6ff;margin-top:6px}.photoPreview{max-height:160px;max-width:100%;border:1px solid var(--line);border-radius:15px;margin-top:10px;background:#000}details summary{font-size:17px;font-weight:1000;cursor:pointer;list-style:none}details summary:before{content:"▾";color:var(--green);margin-right:8px}details:not([open]) summary:before{content:"▸"}@media(max-width:900px){.grid,.grid3,.grid4,.workflow,.aiGrid,.fuelFlow{grid-template-columns:1fr}.arrow{display:none}.top{grid-template-columns:54px 1fr auto}.logo{width:54px;height:54px;border-radius:16px}h1{font-size:19px}.nav{top:82px}.top.shrink+.nav{top:60px}.vinLine{grid-template-columns:1fr}.snapGrid{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:1fr 1fr}.app{padding:8px 8px 88px}}
+
+/* V40 Progress Bar Only During Actions */
+
+/* V30 screenshot OCR improvements */
+.screenshotQueue{border:1px solid rgba(0,200,255,.22);border-radius:15px;background:rgba(0,200,255,.05);padding:10px;margin-top:10px;font-size:12px;color:#cbd5e1;max-height:170px;overflow:auto}
+.screenshotQueue .row{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid rgba(255,255,255,.08);padding:6px 0}
+.screenshotQueue .row:last-child{border-bottom:0}
+.screenshotQueue .oktxt{color:#bbf7d0;font-weight:900}
+.screenshotQueue .warntxt{color:#fef3c7;font-weight:900}
+.screenshotQueue .badtxt{color:#fecdd3;font-weight:900}
+
+
+/* V29 action process center */
+.actionCenter{position:sticky;top:70px;z-index:29;border:1px solid rgba(0,200,255,.30);border-radius:18px;background:linear-gradient(135deg,rgba(0,200,255,.10),rgba(255,18,56,.06),rgba(4,7,14,.96));padding:12px;margin:10px 0;box-shadow:0 10px 35px rgba(0,0,0,.28)}
+.actionTop{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.actionTitle{font-weight:1000;color:#fff}
+.actionState{font-size:12px;font-weight:1000;padding:7px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);color:#cbd5e1}
+.actionState.running{background:rgba(255,208,90,.14);border-color:rgba(255,208,90,.42);color:#fef3c7}
+.actionState.done{background:rgba(23,232,137,.14);border-color:rgba(23,232,137,.42);color:#bbf7d0}
+.actionState.error{background:rgba(255,85,114,.16);border-color:rgba(255,85,114,.45);color:#fecdd3}
+.actionProgress{height:12px;border-radius:999px;background:rgba(255,255,255,.09);overflow:hidden;margin-top:9px}
+.actionProgress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff1238,#ffd05a,#17e889);transition:width .35s}
+.actionLog{margin-top:9px;display:grid;gap:5px;font-size:12px;color:#cbd5e1;max-height:126px;overflow:auto}
+.actionLog div{border-left:3px solid rgba(0,200,255,.55);padding:6px 8px;background:rgba(255,255,255,.045);border-radius:10px}
+.actionLog .done{border-left-color:#17e889;color:#bbf7d0}
+.actionLog .run{border-left-color:#ffd05a;color:#fef3c7}
+.actionLog .err{border-left-color:#ff5572;color:#fecdd3}
+@media(max-width:900px){.actionCenter{position:relative;top:auto}}
+
+
+.ocrDebug{border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(0,0,0,.28);padding:10px;margin-top:10px;font-size:12px;color:#cbd5e1;white-space:pre-wrap;max-height:180px;overflow:auto}
+
+.saveFlash{outline:2px solid rgba(23,232,137,.45)!important;box-shadow:0 0 0 3px rgba(23,232,137,.12)!important}
+.completePanel{border:1px solid rgba(0,200,255,.25);border-radius:16px;background:rgba(0,200,255,.055);padding:12px;margin-top:10px}
+.completeGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.completeItem{border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:10px;background:rgba(255,255,255,.055);font-size:12px;color:#94a3b8;font-weight:900}
+.completeItem b{display:block;color:#fff;font-size:13px;margin-bottom:3px}
+.completeItem.done{border-color:rgba(23,232,137,.45);background:rgba(23,232,137,.10);color:#bbf7d0}
+.completeItem.warnitem{border-color:rgba(255,208,90,.45);background:rgba(255,208,90,.10);color:#fef3c7}
+.autoSaveNote{font-size:11px;color:#bbf7d0;margin-top:6px;font-weight:900}
+@media(max-width:900px){.completeGrid{grid-template-columns:1fr 1fr}}
+
+
+/* V31 scroll-safe process status */
+.actionCenter.scrolled{
+  position:fixed!important;
+  top:auto!important;
+  left:auto!important;
+  right:12px!important;
+  bottom:86px!important;
+  width:min(360px,calc(100vw - 24px))!important;
+  max-width:360px!important;
+  padding:8px 10px!important;
+  border-radius:18px!important;
+  z-index:60!important;
+  box-shadow:0 14px 38px rgba(0,0,0,.55)!important;
+}
+.actionCenter.scrolled .sectionTitle{display:none!important}
+.actionCenter.scrolled .actionTitle{
+  font-size:12px!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+  max-width:230px!important;
+}
+.actionCenter.scrolled .actionProgress{height:6px!important;margin-top:6px!important}
+.actionCenter.scrolled .actionLog{
+  display:none!important;
+}
+.actionCenter.scrolled .actionState{
+  font-size:10px!important;
+  padding:5px 8px!important;
+}
+.actionCenter.scrolled.idle{
+  transform:translateY(130%)!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+.actionCenter.scrolled.running,
+.actionCenter.scrolled.done,
+.actionCenter.scrolled.error{
+  transform:translateY(0)!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+}
+.actionCenterToggle{
+  position:fixed;
+  right:12px;
+  bottom:146px;
+  z-index:61;
+  border:1px solid rgba(0,200,255,.38);
+  background:rgba(3,5,10,.88);
+  color:#dff6ff;
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:11px;
+  font-weight:1000;
+  display:none;
+}
+.actionCenter.scrolled + .actionCenterToggle{display:block}
+@media(max-width:900px){
+  .actionCenter.scrolled{
+    right:8px!important;
+    bottom:78px!important;
+    width:min(330px,calc(100vw - 16px))!important;
+  }
+  .actionCenter.scrolled .actionTitle{max-width:190px!important}
+  .actionCenterToggle{right:8px;bottom:132px}
+}
+
+
+/* V32 OCR diagnostics + direct values receipt */
+.ocrReceipt{border:1px solid rgba(23,232,137,.30);border-radius:16px;background:rgba(23,232,137,.07);padding:10px;margin-top:10px;font-size:12px;color:#d1fae5;white-space:pre-wrap;max-height:220px;overflow:auto}
+.ocrReceipt.warnReceipt{border-color:rgba(255,208,90,.35);background:rgba(255,208,90,.08);color:#fef3c7}
+.ocrReceipt.badReceipt{border-color:rgba(255,85,114,.40);background:rgba(255,85,114,.10);color:#fecdd3}
+
+
+/* V40 Progress Bar Only During Actions */
+.fastOcrBox{border:1px solid rgba(255,255,255,.13);border-radius:15px;background:rgba(255,255,255,.055);padding:10px;margin-top:10px;font-size:12px;color:#cbd5e1}
+.fastOcrBox label{display:flex;gap:9px;align-items:center;margin:0;font-size:12px;color:#fff;font-weight:900}
+.fastOcrBox input{width:18px;height:18px;min-height:18px}
+.fastOcrBox small{display:block;margin-top:6px;color:#94a3b8;line-height:1.35}
+
+
+/* V34 AI Assist Q&A */
+.aiAskBox{border:1px solid rgba(0,200,255,.28);border-radius:18px;background:linear-gradient(135deg,rgba(0,200,255,.08),rgba(255,255,255,.035));padding:13px;margin-top:12px}
+.aiChatWindow{border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(0,0,0,.28);padding:12px;min-height:170px;max-height:360px;overflow:auto;margin-top:10px}
+.aiMsg{padding:10px 12px;border-radius:15px;margin:8px 0;line-height:1.45;font-size:14px;white-space:pre-wrap}
+.aiMsg.user{background:rgba(0,200,255,.13);border:1px solid rgba(0,200,255,.25);color:#e0f7ff;margin-left:18px}
+.aiMsg.bot{background:rgba(23,232,137,.10);border:1px solid rgba(23,232,137,.22);color:#eafff4;margin-right:18px}
+.aiMsg.system{background:rgba(255,208,90,.10);border:1px solid rgba(255,208,90,.28);color:#fef3c7;font-size:12px}
+.aiQuickGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.aiQuickGrid button{font-size:12px;padding:10px;border-radius:14px}
+@media(max-width:900px){.aiQuickGrid{grid-template-columns:1fr}.aiMsg.user{margin-left:0}.aiMsg.bot{margin-right:0}}
+
+
+/* V36 modern lightweight UI + report readability */
+:root{
+  --fontMain:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --fontDisplay:"Arial Black", Inter, ui-sans-serif, system-ui, sans-serif;
+}
+body{font-family:var(--fontMain)!important}
+.card{
+  border-radius:24px!important;
+  box-shadow:0 16px 42px rgba(0,0,0,.28)!important;
+}
+.card h2{letter-spacing:.01em}
+input,select,textarea{
+  border-radius:16px!important;
+  background:rgba(255,255,255,.075)!important;
+}
+.btn{
+  border-radius:16px!important;
+  letter-spacing:.01em;
+}
+.reportTools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:12px 0;
+}
+.reportModern{
+  background:#ffffff;
+  color:#0f172a;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 20px 55px rgba(0,0,0,.40);
+  border:1px solid rgba(255,255,255,.18);
+  margin-top:14px;
+  font-family:var(--fontMain);
+}
+.reportHero{
+  background:linear-gradient(135deg,#05070c 0%,#111827 55%,#061827 100%);
+  color:#fff;
+  padding:22px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  align-items:center;
+}
+.reportBrand{
+  font-family:var(--fontDisplay);
+  font-size:26px;
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.reportTag{
+  color:#9eeeff;
+  font-weight:900;
+  font-size:13px;
+  margin-top:6px;
+}
+.reportBadge{
+  background:linear-gradient(135deg,#ff1238,#9b001b);
+  color:#fff;
+  border-radius:999px;
+  padding:10px 14px;
+  font-weight:1000;
+  text-align:center;
+  box-shadow:0 0 24px rgba(255,18,56,.22);
+}
+.reportBody{
+  padding:18px;
+  display:grid;
+  gap:14px;
+}
+.reportSection{
+  border:1px solid #e2e8f0;
+  border-radius:18px;
+  padding:14px;
+  background:#ffffff;
+}
+.reportSection.blue{
+  border-left:7px solid #00c8ff;
+  background:linear-gradient(90deg,#effaff,#fff 42%);
+}
+.reportSection.red{
+  border-left:7px solid #ff1238;
+  background:linear-gradient(90deg,#fff1f4,#fff 42%);
+}
+.reportSection.green{
+  border-left:7px solid #17e889;
+  background:linear-gradient(90deg,#effff7,#fff 42%);
+}
+.reportSection.amber{
+  border-left:7px solid #ffd05a;
+  background:linear-gradient(90deg,#fff9e9,#fff 42%);
+}
+.reportSection h3{
+  margin:0 0 9px;
+  font-size:15px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:#0f172a;
+}
+.reportText{
+  font-size:14px;
+  line-height:1.6;
+  white-space:pre-wrap;
+}
+.reportGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+.reportInfo{
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:10px;
+  background:#f8fafc;
+}
+.reportInfo b{
+  display:block;
+  color:#64748b;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  margin-bottom:4px;
+}
+.reportInfo span{
+  font-weight:900;
+  color:#0f172a;
+  word-break:break-word;
+}
+.reportPillRow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.reportPill{
+  border-radius:999px;
+  padding:7px 10px;
+  background:#f1f5f9;
+  border:1px solid #e2e8f0;
+  font-size:12px;
+  font-weight:900;
+}
+.reportPill.red{background:#fff1f4;color:#9f1239;border-color:#fecdd3}
+.reportPill.blue{background:#effaff;color:#075985;border-color:#bae6fd}
+.reportPill.green{background:#ecfdf5;color:#047857;border-color:#bbf7d0}
+.reportSteps{
+  counter-reset:step;
+  display:grid;
+  gap:8px;
+}
+.reportStep{
+  display:grid;
+  grid-template-columns:34px 1fr;
+  gap:9px;
+  align-items:start;
+  padding:10px;
+  border-radius:14px;
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+}
+.reportStep:before{
+  counter-increment:step;
+  content:counter(step);
+  width:28px;height:28px;
+  display:grid;place-items:center;
+  border-radius:999px;
+  background:#00c8ff;
+  color:#00131a;
+  font-weight:1000;
+}
+.reportFooter{
+  background:#f8fafc;
+  border-top:1px solid #e2e8f0;
+  padding:14px 18px;
+  color:#475569;
+  font-size:12px;
+  line-height:1.45;
+}
+.reportPlain{
+  background:rgba(0,0,0,.42);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:14px;
+  min-height:200px;
+  white-space:pre-wrap;
+  color:#e5e7eb;
+  overflow:auto;
+}
+@media(max-width:900px){
+  .reportHero{grid-template-columns:1fr}
+  .reportGrid{grid-template-columns:1fr}
+  .reportBrand{font-size:21px}
+  .reportBody{padding:12px}
+}
+@media print{
+  body{background:#fff!important;color:#000!important}
+  .top,.nav,.workflow,.bottomBar,.actionCenter,.actionCenterToggle,.btns,.reportTools{display:none!important}
+  .app{max-width:none!important;padding:0!important}
+  .tab{display:block!important}
+  .card{box-shadow:none!important;border:0!important;padding:0!important;background:#fff!important}
+  .reportModern{box-shadow:none!important;border:0!important}
+}
+
+
+/* V37 copy-paste code reader */
+.codePasteHelp{border:1px solid rgba(0,200,255,.24);border-radius:14px;background:rgba(0,200,255,.055);padding:10px;margin-top:9px;font-size:12px;color:#cbd5e1}
+.codePasteHelp b{color:#dff6ff}
+.codeReadReceipt{border:1px solid rgba(23,232,137,.30);border-radius:15px;background:rgba(23,232,137,.07);padding:10px;margin-top:10px;color:#d1fae5;font-size:12px;white-space:pre-wrap}
+
+
+/* V38 final auto-fill receipt */
+.autoFillReceipt{
+  border:1px solid rgba(23,232,137,.32);
+  border-radius:16px;
+  background:linear-gradient(135deg,rgba(23,232,137,.08),rgba(0,200,255,.045));
+  padding:11px;
+  margin-top:10px;
+  font-size:12px;
+  color:#d1fae5;
+  white-space:pre-wrap;
+  max-height:190px;
+  overflow:auto;
+}
+.autoFillReceipt.warn{
+  border-color:rgba(255,208,90,.38);
+  background:rgba(255,208,90,.08);
+  color:#fef3c7;
+}
+.autoFillReceipt.bad{
+  border-color:rgba(255,85,114,.42);
+  background:rgba(255,85,114,.10);
+  color:#fecdd3;
+}
+
+
+/* V39 scroll-stable progress/status fix */
+html,body{scroll-behavior:auto!important;overscroll-behavior-y:contain}
+.actionCenter{
+  position:relative!important;
+  top:auto!important;
+  bottom:auto!important;
+  right:auto!important;
+  left:auto!important;
+  z-index:5!important;
+  transition:opacity .18s ease, transform .18s ease, max-height .18s ease, margin .18s ease, padding .18s ease!important;
+  will-change:opacity,transform;
+}
+.actionCenter.scrollHidden{
+  opacity:0!important;
+  transform:translateY(-12px)!important;
+  pointer-events:none!important;
+  max-height:0!important;
+  overflow:hidden!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
+  border-width:0!important;
+}
+.actionCenter.scrolled,
+.actionCenter.scrolled.idle,
+.actionCenter.scrolled.running,
+.actionCenter.scrolled.done,
+.actionCenter.scrolled.error{
+  position:relative!important;
+  top:auto!important;
+  bottom:auto!important;
+  right:auto!important;
+  left:auto!important;
+  width:auto!important;
+  max-width:none!important;
+  transform:none!important;
+}
+.actionCenterToggle{display:none!important}
+.nav,.top{transform:translateZ(0)}
+input,select,textarea{font-size:16px!important}
+#fileUpload,#photoUpload{scroll-margin-top:150px}
+.card{scroll-margin-top:130px}
+@media(max-width:900px){
+  .actionCenter{position:relative!important}
+  .bottomBar{transform:translateZ(0)}
+}
+
+
+/* V40 progress only appears while an action is running */
+.actionCenter{
+  display:none!important;
+}
+.actionCenter.actionActive{
+  display:block!important;
+}
+.actionCenter.actionDoneBrief{
+  display:block!important;
+  opacity:.95!important;
+}
+.actionCenter.scrollHidden{
+  display:none!important;
+}
+
+/* ── Upload mode selector ── */
+.uploadModeGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.uploadModeBtn{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 8px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.06);color:#94a3b8;cursor:pointer;text-align:center;transition:all .15s;min-height:90px}
+.uploadModeBtn b{color:#e2e8f0;font-size:13px;display:block}
+.uploadModeBtn span{font-size:11px;line-height:1.3;color:#64748b}
+.uploadModeBtn .uploadModeIcon{font-size:22px}
+.uploadModeBtn.active{border-color:var(--blue);background:rgba(0,200,255,.15);color:#dff6ff}
+.uploadModeBtn.active b{color:#fff}
+.uploadModeBtn.active span{color:#a5f3fc}
+.uploadModeBtn:hover:not(.active){border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.10)}
+.uploadModeLabel{margin-top:10px;font-size:12px;color:#94a3b8;padding:8px 12px;border:1px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.04)}
+.uploadModeLabel b{color:#dff6ff}
+@media(max-width:900px){.uploadModeGrid{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+</head>
+<body>
+<div class="app">
+<header id="appHeader" class="top"><div class="logo"><img src="data:image/jpeg;base64,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" alt="AutoMedic Diagnostic logo"></div><div><h1>AutoMedic Pinpoint Pro V42</h1><div class="tag">We Give Answers, Not Codes.</div><div class="sub">Customer → VIN Profile → Scanner Intake → Values → Analyze → Report • Diagnostic-only scope • 850-368-2285</div></div><div class="readyDot"><span id="topReady">0%<br>READY</span></div></header>
+<nav class="nav" id="nav"><button class="active" data-tab="customer">CUSTOMER</button><button data-tab="vinprofile">VIN PULL</button><button data-tab="intake">SCANNER INTAKE</button><button data-tab="values">VALUES</button><button data-tab="analyze">ANALYZE</button><button data-tab="guided">GUIDED STEPS</button><button data-tab="ai">AI ASSIST</button><button data-tab="report">REPORT</button><button data-tab="history">HISTORY</button></nav>
+
+<div id="actionCenter" class="actionCenter">
+  <div class="actionTop">
+    <div>
+      <div class="sectionTitle">Live Process Status</div>
+      <div id="actionTitle" class="actionTitle">Ready — no action running.</div>
+    </div>
+    <div id="actionState" class="actionState">READY</div>
+  </div>
+  <div class="actionProgress"><span id="actionProgressBar"></span></div>
+  <div id="actionLog" class="actionLog">
+    <div>Waiting for VIN profile, scanner import, OCR, QR, analyze, or report action.</div>
+  </div>
+</div>
+
+
+<section id="customer" class="tab active">
+  <div class="grid">
+    <div class="card wide greenCard">
+      <div class="sectionTitle">Step 1 — Customer Intake First</div><h2><span class="badge green">1</span> Customer Information</h2>
+      <div class="ok"><b>Start here every job.</b> Customer info stays protected. VIN Profile and scanner import will not erase it.</div>
+      <div class="grid3"><div><label>Customer Name</label><input id="customerName" placeholder="Customer name" oninput="ready()"></div><div><label>Customer Phone</label><input id="customerPhone" inputmode="tel" placeholder="Phone" oninput="ready()"></div><div><label>Work Order</label><input id="workOrder" placeholder="Optional job / RO #" oninput="ready()"></div></div>
+      <label>Customer Complaint / Symptom</label><textarea id="complaint" placeholder="Example: Check engine light, rough idle, stalls after warm, transmission shifts hard, ABS light, no start..." oninput="ready()"></textarea>
+      <div class="grid3"><div><label>Vehicle Tag / Plate</label><input id="plate" placeholder="CR29XW" autocapitalize="characters" oninput="ready()"></div><div><label>State</label><input id="plateState" value="FL" autocapitalize="characters" oninput="ready()"></div><div><label>Mileage</label><input id="mileage" inputmode="numeric" placeholder="Odometer" oninput="ready()"></div></div>
+      <label>VIN</label><div class="vinLine"><input id="vin" placeholder="17-character VIN" maxlength="17" autocapitalize="characters" spellcheck="false" oninput="syncVin(this.value);ready()"><button class="btn blue" onclick="pullVinProfileInline()">PULL VIN PROFILE</button></div>
+      <div id="vinCustomerStatus" class="statusLine">VIN Profile builds vehicle identity, recalls, complaint patterns, and general baseline guidance. Scanner data is imported next.</div>
+      <div class="lastVinBox"><div><b>Remembered VIN:</b> <span id="lastVinText">—</span><div class="mini">Loads VIN/vehicle only. It does not overwrite customer info.</div></div><div class="btns" style="margin:0"><button class="btn blue" onclick="useLastVin()">Use Last VIN</button><button class="btn ghost" onclick="clearLastVin()">Clear</button></div></div>
+      <div class="grid3" style="margin-top:10px"><div><label>Year</label><input id="year" placeholder="Auto-fills"></div><div><label>Make</label><input id="make" placeholder="Auto-fills"></div><div><label>Model</label><input id="model" placeholder="Auto-fills"></div><div><label>Engine</label><input id="engine" placeholder="Auto-fills if available"></div><div><label>Transmission</label><input id="transmission" placeholder="Auto-fills if available"></div><div><label>Fuel Type</label><input id="fuelType" placeholder="Auto-fills"></div></div>
+      <div class="btns"><button class="btn blue" onclick="showTab('vinprofile')">VIN Pull Center</button><button class="btn green" onclick="showTab('intake')">Next: Scanner Intake</button><button class="btn ghost" onclick="loadSampleReport();showTab('intake')">Load Sample Report</button></div>
+    </div>
+    <div class="workflow wide"><button class="flowStep active" data-flow="customer" onclick="showTab('customer')"><b><span class="num">1</span> Customer Intake</b><span>Name, phone, complaint, tag, mileage.</span></button><button class="flowStep" data-flow="vinprofile" onclick="showTab('vinprofile')"><b><span class="num">2</span> VIN Pull</b><span>Decode VIN, recalls, known patterns, baselines.</span></button><button class="flowStep" data-flow="intake" onclick="showTab('intake')"><b><span class="num">3</span> Scanner Intake</b><span>Paste/upload/photo/QR scanner data.</span></button><button class="flowStep" data-flow="values" onclick="showTab('values')"><b><span class="num">4</span> Values</b><span>Review all pulled/imported data.</span></button><button class="flowStep" data-flow="analyze" onclick="analyzeAll();showTab('analyze')"><b><span class="num">5</span> Analyze</b><span>One most-probable direction.</span></button><button class="flowStep" data-flow="report" onclick="buildReport();showTab('report')"><b><span class="num">6</span> Report</b><span>Customer-ready report and save.</span></button></div>
+    <div class="card brandCard"><div class="sectionTitle">Fast Field Route</div><h2><span class="badge blue">GO</span> Two Main Buttons</h2><button class="btn blue" style="width:100%;margin-bottom:8px" onclick="showTab('vinprofile')">1. Pull VIN + Build Profile</button><button class="btn green" style="width:100%" onclick="showTab('intake')">2. Import Scanner Data</button><div class="warn"><b>Clean expectation:</b> VIN Profile pulls vehicle/legal free public info. Scanner Intake pulls DTCs, live data, freeze frame, fuel trims, O2, MAP/MAF, transmission, and module data.</div></div>
+    <div class="card redCard"><div class="sectionTitle">Scope Lock</div><h2><span class="badge amber">!</span> Diagnostic Only</h2><div class="warn"><b>No under-hood work. No under-car work. No wrenching. No repairs.</b><br>AutoMedic reviews scanner data, VIN/recall information, customer complaint, live data, freeze frame, OEM diagram requests, and provides reports.</div></div>
+  </div>
+</section>
+
+<section id="vinprofile" class="tab">
+  <div class="grid">
+    <div class="card wide brandCard"><div class="sectionTitle">Step 2 — VIN Pull / Vehicle Profile</div><h2><span class="badge blue">VIN</span> Pull VIN + Build Profile + Build Vehicle Snapshot</h2><p class="hint">This is a free/legal VIN-based pull. It does not pull scanner live data. Use Scanner Intake for that.</p><div class="vinLine"><input id="vinProfileInput" class="vinBig" maxlength="17" placeholder="17-CHARACTER VIN" autocapitalize="characters" spellcheck="false" oninput="syncVin(this.value);ready()"><button class="btn blue" onclick="pullVinProfileCenter()">PULL VIN PROFILE</button></div><div id="vinProfileStatus" class="ok">Enter VIN and tap Pull VIN + Build Profile.</div><div class="snapGrid"><div class="snap"><span>Year</span><b id="snapYear">—</b></div><div class="snap"><span>Make</span><b id="snapMake">—</b></div><div class="snap"><span>Model</span><b id="snapModel">—</b></div><div class="snap"><span>Transmission</span><b id="snapTransmission">—</b></div><div class="snap"><span>Engine</span><b id="snapEngine">—</b></div><div class="snap"><span>Fuel</span><b id="snapFuel">—</b></div><div class="snap"><span>Recalls</span><b id="snapRecall">—</b></div><div class="snap"><span>Patterns</span><b id="snapPattern">—</b></div></div><div class="btns"><button class="btn green" onclick="showTab('intake')">Next: Scanner Intake</button><button class="btn ghost" onclick="showTab('customer')">Back To Customer</button></div></div>
+    <div class="card"><h2><span class="badge green">DATA</span> VIN Decode</h2><pre id="vinDecodeOut">No VIN decoded yet.</pre></div><div class="card"><h2><span class="badge amber">REC</span> Recalls</h2><pre id="recallOut">No recalls pulled yet.</pre></div><div class="card wide"><h2><span class="badge blue">PAT</span> Known Complaint Patterns + Baseline Profile</h2><pre id="patternOut">No pattern data pulled yet.</pre></div>
+  </div>
+</section>
+
+<section id="intake" class="tab">
+  <div class="grid">
+    <div class="card wide brandCard"><div class="sectionTitle">Step 3 — Universal Scanner Intake</div><h2><span class="badge green">IN</span> Paste • Upload • Photo • QR</h2><p class="hint">All scanner data feeds the same auto-populate engine. Works with MK900BT reports and generic scanner text/CSV/log files.</p><div class="btns"><button class="btn green" onclick="runScannerImport(true)">IMPORT + AUTO-FILL + ANALYZE</button><button class="btn blue" onclick="runScannerImport(false)">IMPORT + AUTO-FILL ONLY</button><button class="btn ghost" onclick="loadSampleReport()">Load Sample Format</button></div><div id="intakeStatus" class="ok">Ready. Paste report text, upload a file, take a scanner photo, or scan QR.</div>
+      <div id="intakeCompletePanel" class="completePanel">
+        <b>Scanner Intake Completion</b>
+        <div class="mini">Each item turns green when the app has enough data from text, file, photo OCR, or QR.</div>
+        <div class="completeGrid">
+          <div id="doneReportText" class="completeItem"><b>Report Text</b><span>Waiting</span></div>
+          <div id="doneVehicle" class="completeItem"><b>Vehicle</b><span>Waiting</span></div>
+          <div id="doneCodes" class="completeItem"><b>DTC Codes</b><span>Waiting</span></div>
+          <div id="doneModules" class="completeItem"><b>Modules</b><span>Waiting</span></div>
+          <div id="doneLiveData" class="completeItem"><b>Live Data</b><span>Waiting</span></div>
+          <div id="doneFreeze" class="completeItem"><b>Freeze Frame</b><span>Waiting</span></div>
+          <div id="donePhoto" class="completeItem"><b>Photo OCR</b><span>Optional</span></div>
+          <div id="doneReady" class="completeItem"><b>Ready To Analyze</b><span>Waiting</span></div>
+        </div>
+        <div id="autoSaveStatus" class="autoSaveNote">Auto-save is on.</div>
+      </div>
+    </div>
+    <div class="card"><h2><span class="badge blue">TXT</span> Copy / Paste Report</h2><textarea id="scannerText" placeholder="Paste full scanner report, live data, fuel trim data, copied QR text, or just codes like: P0106 P0122 P0452 P1122" oninput="markUserEdit(this);autoSaveDraft();updateIntakeCompletion();"></textarea>
+      <div class="codePasteHelp"><b>Quick code paste now works:</b> You can paste codes by themselves, one per line, comma-separated, or with descriptions. Example: <b>P0106, P0122, P0452, P1122</b>.</div>
+      <div class="btns"><button class="btn blue" onclick="pasteFromClipboard()">Paste From Clipboard</button><button class="btn green" onclick="runScannerImport(false)">Read Pasted Text</button><button class="btn ghost" onclick="readCodesOnly()">Read Codes Only</button></div>
+      <div id="codeReadReceipt" class="codeReadReceipt">No pasted codes read yet.</div>
+      <div id="autoFillReceipt" class="autoFillReceipt">Auto-fill receipt: waiting for paste, upload, QR, OCR, or scanner import.</div></div>
+    <div class="card"><h2><span class="badge green">FILE</span> Upload Screenshots</h2>
+      <p class="hint"><b>Pick what screen you're uploading first, then select the file.</b> This tells the app exactly what to look for — no guessing.</p>
+      <div class="uploadModeGrid">
+        <button class="uploadModeBtn active" id="modeBtn_live" onclick="setUploadMode('live',this)">
+          <span class="uploadModeIcon">📊</span>
+          <b>Live Data</b>
+          <span>Fuel trims, MAP, O2, RPM, ECT, TPS...</span>
+        </button>
+        <button class="uploadModeBtn" id="modeBtn_dtc" onclick="setUploadMode('dtc',this)">
+          <span class="uploadModeIcon">🔴</span>
+          <b>DTC / Codes</b>
+          <span>P0106, P0452 and module list</span>
+        </button>
+        <button class="uploadModeBtn" id="modeBtn_freeze" onclick="setUploadMode('freeze',this)">
+          <span class="uploadModeIcon">🟡</span>
+          <b>Freeze Frame</b>
+          <span>Snapshot at time of fault</span>
+        </button>
+        <button class="uploadModeBtn" id="modeBtn_auto" onclick="setUploadMode('auto',this)">
+          <span class="uploadModeIcon">⚪</span>
+          <b>Auto-Detect</b>
+          <span>Try everything (slower)</span>
+        </button>
+      </div>
+      <div id="uploadModeLabel" class="uploadModeLabel">Mode: <b>Live Data</b> — will extract fuel trims, MAP, O2, RPM, ECT, TPS and other PIDs.</div>
+      <div class="btns" style="margin-top:12px">
+        <button class="btn green" onclick="$('fileUpload').click()">SELECT FILES →</button>
+      </div>
+      <input id="fileUpload" type="file" multiple accept=".txt,.csv,.log,.html,.json,.xml,.pdf,image/*,.jpg,.jpeg,.png,.webp,.heic,.heif" style="display:none">
+      <div id="fileList" class="mini" style="margin-top:8px">No files uploaded.</div>
+      <div id="screenshotQueue" class="screenshotQueue">No screenshots processed yet.</div>
+      <div class="fastOcrBox"><label><input id="fastOcrMode" type="checkbox" checked> Fast OCR Mode</label><small>Resizes and sharpens images before reading. Turn off only for blurry or sideways photos.</small></div>
+    </div>
+    <div class="card"><h2><span class="badge amber">📷</span> Scanner Camera / Screenshot OCR</h2><p class="hint"><b>Use this for Autel scanner camera photos, phone photos, or screenshots.</b> For best auto-fill, use the scanner screenshot/share report when possible. Camera photos must clearly show text values on the screen.</p><input id="photoUpload" type="file" accept="image/*" capture="environment" onchange="runPhotoOCR()"><img id="photoPreview" class="photoPreview hidden"><div class="btns"><button class="btn blue" onclick="runPhotoOCR()">Read Photo / Screenshot</button></div><div id="ocrStatus" class="warn">Ready for scanner camera photo, phone photo, or screenshot. After OCR, this box will tell you if text was read and whether values auto-populated.</div></div>
+    <div class="card"><h2><span class="badge blue">CAM</span> Scanner Camera Rule</h2><div class="warn"><b>Important:</b> A scanner camera photo only auto-fills if the app can read the actual words/numbers in the image. If the photo is blurry, sideways, glare-heavy, or only shows the vehicle/part, it will save as evidence but will not populate values.</div><div class="ok"><b>Best for auto-fill:</b><br>1. Autel report text/email/share<br>2. Scanner screenshot of Live Data or DTC screen<br>3. Clear phone photo of scanner screen<br>4. Scanner camera photo only if it clearly captures readable scanner data</div></div>
+    <div class="card"><h2><span class="badge blue">QR</span> QR Code Reader</h2><div class="btns"><button class="btn blue" onclick="startQRScan()">Open Camera QR</button><button class="btn ghost" onclick="stopQRScan()">Stop</button></div><video id="qrVideo" class="hidden" autoplay playsinline muted style="width:100%;max-height:240px;border-radius:15px;background:#000;margin-top:10px"></video><label>Manual QR Text / Link</label><input id="qrManual" placeholder="Paste QR link or text"><button class="btn green" style="margin-top:8px" onclick="handleQRText(val('qrManual'))">Read QR Text</button><div id="qrStatus" class="mini">Camera QR uses browser BarcodeDetector when available.</div></div>
+    <div class="card wide"><h2><span class="badge green">SUM</span> Auto-Fill Summary</h2><textarea id="importSummary" placeholder="Import summary appears here."></textarea></div>
+  </div>
+</section>
+
+<section id="values" class="tab">
+  <div class="grid">
+    <div class="card wide"><div class="sectionTitle">Step 4 — Values Hub</div><h2><span class="badge blue">4</span> All Vehicle + Scanner Values</h2><div class="btns"><button class="btn blue" onclick="showTab('vinprofile')">VIN Pull</button><button class="btn green" onclick="showTab('intake')">Scanner Intake</button><button class="btn amber" onclick="analyzeAll();showTab('analyze')">Analyze Values</button></div></div>
+    <details open class="wide"><summary>Vehicle Profile</summary><div class="grid4"><div><label>VIN</label><input id="v_vin" readonly></div><div><label>Tag</label><input id="v_plate" readonly></div><div><label>Year</label><input id="v_year" readonly></div><div><label>Make / Model</label><input id="v_makeModel" readonly></div><div><label>Engine</label><input id="v_engine" readonly></div><div><label>Transmission</label><input id="v_transmission" readonly></div><div><label>Fuel Type</label><input id="v_fuel" readonly></div><div><label>Mileage</label><input id="v_mileage" readonly></div></div></details>
+    <details open class="wide"><summary>DTCs + Modules</summary><div class="kpis"><div class="kpi"><b id="dtcCount">0</b><span>DTCs</span></div><div class="kpi"><b id="moduleCount">0</b><span>Modules</span></div><div class="kpi"><b id="missingCount">0</b><span>Missing Items</span></div><div class="kpi"><b id="scoreBox">0%</b><span>Confidence</span></div></div><div class="tablewrap"><table><thead><tr><th>Module</th><th>Code</th><th>Description</th><th>Status</th><th>Priority</th></tr></thead><tbody id="dtcTable"><tr><td colspan="5">No scanner report imported.</td></tr></tbody></table></div><div class="tablewrap"><table><thead><tr><th>Module</th><th>DTC Count</th></tr></thead><tbody id="moduleTable"><tr><td colspan="2">No modules imported.</td></tr></tbody></table></div></details>
+    <details open class="wide"><summary>Live Data + Fuel Trims + O2 + EVAP</summary><div class="grid4"><div><label>STFT B1 %</label><input id="stft1" inputmode="decimal" oninput="quickTrim();ready()"></div><div><label>LTFT B1 %</label><input id="ltft1" inputmode="decimal" oninput="quickTrim();ready()"></div><div><label>STFT B2 %</label><input id="stft2" inputmode="decimal" oninput="quickTrim();ready()"></div><div><label>LTFT B2 %</label><input id="ltft2" inputmode="decimal" oninput="quickTrim();ready()"></div><div><label>MAF g/s</label><input id="maf" inputmode="decimal"></div><div><label>MAP kPa</label><input id="mapKpa" inputmode="decimal"></div><div><label>MAP Volts</label><input id="mapVolts" inputmode="decimal"></div><div><label>ECT °F</label><input id="ect" inputmode="decimal"></div><div><label>RPM</label><input id="rpm" inputmode="decimal"></div><div><label>TPS %</label><input id="tpsPct" inputmode="decimal"></div><div><label>Battery / VCI V</label><input id="batteryVolts" inputmode="decimal"></div><div><label>Fuel Pressure</label><select id="fuelPressure"><option>Unknown</option><option>Normal</option><option>Low</option><option>High</option></select></div><div><label>O2 B1S1</label><input id="o2b1s1" inputmode="decimal"></div><div><label>O2 B2S1</label><input id="o2b2s1" inputmode="decimal"></div><div><label>FTP Pressure</label><input id="ftpPressure" inputmode="decimal"></div><div><label>FTP Volts</label><input id="ftpVolts" inputmode="decimal"></div><div><label>Fuel Tank %</label><input id="fuelTankPct" inputmode="decimal"></div><div><label>Baro</label><input id="baro" inputmode="decimal"></div><div><label>AFR</label><input id="afr" inputmode="decimal"></div><div><label>Freeze Frame Code</label><input id="freezeCode"></div></div><div id="trimPattern" class="ok">Enter fuel trims or import live data.</div></details>
+    <details open class="wide"><summary>Fuel Trim Visual Input Guide</summary><div class="warn"><b>Use the scanner live-data screen.</b> Capture the same PIDs at warm idle, 2500 RPM, and symptom/load. Enter STFT + LTFT for each bank.</div><div class="fuelFlow"><div class="fuelStage"><h3>Warm Idle</h3><div class="trimGrid"><div><label>STFT B1</label><input id="idleStft1" inputmode="decimal" oninput="visualTrimSync()"></div><div><label>LTFT B1</label><input id="idleLtft1" inputmode="decimal" oninput="visualTrimSync()"></div><div><label>STFT B2</label><input id="idleStft2" inputmode="decimal" oninput="visualTrimSync()"></div><div><label>LTFT B2</label><input id="idleLtft2" inputmode="decimal" oninput="visualTrimSync()"></div></div></div><div class="arrow">→</div><div class="fuelStage"><h3>2500 RPM</h3><div class="trimGrid"><div><label>STFT B1</label><input id="rpmStft1" inputmode="decimal" oninput="visualTrimSync()"></div><div><label>LTFT B1</label><input id="rpmLtft1" inputmode="decimal" oninput="visualTrimSync()"></div><div><label>STFT B2</label><input id="rpmStft2" inputmode="decimal" oninput="visualTrimSync()"></div><div><label>LTFT B2</label><input id="rpmLtft2" inputmode="decimal" oninput="visualTrimSync()"></div></div></div><div class="arrow">→</div><div class="fuelStage"><h3>Symptom / Load</h3><div class="trimGrid"><div><label>STFT B1</label><input id="loadStft1" inputmode="decimal" oninput="visualTrimSync()"></div><div><label>LTFT B1</label><input id="loadLtft1" inputmode="decimal" oninput="visualTrimSync()"></div><div><label>STFT B2</label><input id="loadStft2" inputmode="decimal" oninput="visualTrimSync()"></div><div><label>LTFT B2</label><input id="loadLtft2" inputmode="decimal" oninput="visualTrimSync()"></div></div></div></div><div id="visualTrimResult" class="trimResult good">Normal range is usually about -10% to +10%. Positive means adding fuel. Negative means taking fuel away.</div><div class="btns"><button class="btn green" onclick="sendVisualTrimToMain()">Use Warm Idle Trims In Main Boxes</button><button class="btn blue" onclick="visualTrimSync();analyzeAll();showTab('analyze')">Analyze Trim Pattern</button><button class="btn ghost" onclick="clearVisualTrims()">Clear Fuel Trim Visual</button></div></details>
+    <details open class="wide"><summary>Missing Data Checklist</summary><div id="missingList" class="warn">Missing items appear after import/analyze.</div></details>
+  </div>
+</section>
+
+<section id="analyze" class="tab"><div class="grid"><div class="card wide redCard"><div class="sectionTitle">Step 5 — Analyze</div><h2><span class="badge amber">5</span> One Most-Probable Direction</h2><div class="bigAnswer" id="primaryAnswer">Need Customer Info</div><div class="conf" id="confidence">0%</div><p id="whyText" class="hint">Start with customer complaint, VIN profile, and scanner intake.</p><div id="whyChips" class="chips"><span class="chip">Customer</span><span class="chip">VIN Profile</span><span class="chip">Scanner Intake</span></div><div class="btns"><button class="btn green" onclick="analyzeAll()">ANALYZE NOW</button><button class="btn blue" onclick="showTab('guided')">Guided Steps</button><button class="btn ghost" onclick="buildAIOutput();showTab('ai')">AI Assist Output</button><button class="btn amber" onclick="buildReport();showTab('report')">Generate Report</button></div></div><div class="card"><h2>Next Scanner-Based Verification</h2><pre id="nextBox">Analyze first.</pre></div><div class="card"><h2>Guided Steps</h2><div id="stepsBox" class="ok">Analyze first.</div></div><div class="card wide"><h2>OEM / Diagram Request</h2><textarea id="diagramRequest" placeholder="Diagram/OEM request appears after analysis."></textarea></div></div></section>
+
+<section id="guided" class="tab">
+  <div class="grid">
+    <div class="card wide blueCard">
+      <div class="sectionTitle">After Analyze — Guided Steps</div>
+      <h2><span class="badge blue">GS</span> Scanner-Only Verification Before Report</h2>
+      <p class="hint">Use this tab after Analyze. This is the technician workflow area before the customer report is finalized.</p>
+      <div class="btns">
+        <button class="btn green" onclick="analyzeAll();showTab('guided')">Refresh Guided Steps</button>
+        <button class="btn blue" onclick="buildAIOutput();showTab('ai')">Ask AI Assist</button>
+        <button class="btn amber" onclick="buildReport();showTab('report')">Build Customer Report</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Next Scanner-Based Verification</h2>
+      <pre id="guidedNextBox">Analyze first.</pre>
+    </div>
+    <div class="card">
+      <h2>Guided Step Checklist</h2>
+      <div id="guidedStepsBox" class="ok">Analyze first.</div>
+    </div>
+    <div class="card wide">
+      <h2>OEM / Diagram Request</h2>
+      <textarea id="guidedDiagramRequest" placeholder="Diagram/OEM request appears after analysis."></textarea>
+    </div>
+    <div class="card wide">
+      <h2>Tech Notes Before Report</h2>
+      <textarea id="guidedTechNotes" placeholder="Add any notes from the guided checks before generating customer report."></textarea>
+    </div>
+  </div>
+</section>
+
+
+<section id="ai" class="tab">
+<div class="card">
+  <h2><span class="badge blue">ASK</span> AI Assist Q&A</h2>
+  <p class="hint">Ask questions about the current scan, codes, fuel trims, screenshots, VIN profile, or what to verify next. The answer uses the data already inside this app.</p>
+  <div class="aiAskBox">
+    <label>Ask AutoMedic AI</label>
+    <textarea id="aiQuestion" placeholder="Example: What is the most likely cause of P0106, P0122, P0452 and P1122 together? What scanner values should I check next?"></textarea>
+    <div class="btns">
+      <button class="btn green" onclick="askAIAssist()">Ask AI Assist</button>
+      <button class="btn blue" onclick="askAIAssist('What should I verify next with scanner-only data?')">Next Verification</button>
+      <button class="btn ghost" onclick="clearAIChat()">Clear Chat</button>
+    </div>
+    <div class="aiQuickGrid">
+      <button class="btn ghost" onclick="askAIAssist('Explain these DTCs in plain English and rank the most likely root cause.')">Explain Codes</button>
+      <button class="btn ghost" onclick="askAIAssist('Interpret my fuel trims and tell me what pattern they show.')">Fuel Trim Help</button>
+      <button class="btn ghost" onclick="askAIAssist('Write a customer-friendly explanation for this diagnostic result.')">Customer Wording</button>
+    </div>
+    <div id="aiChatWindow" class="aiChatWindow">
+      <div class="aiMsg system">AI Assist ready. Import scanner data or run analysis first for the strongest answer.</div>
+    </div>
+  </div>
+</div>
+<div class="grid"><div class="card wide brandCard"><div class="sectionTitle">AI Assist Output</div><h2><span class="badge blue">AI</span> Clean Diagnostic Summary</h2><p class="hint">This creates a structured AI-style output inside the app. For true cloud AI later, send this prompt to a secure backend — not direct browser API.</p><div class="btns"><button class="btn green" onclick="buildAIOutput()">Build AI Assist Output</button><button class="btn blue" onclick="copyAIPrompt()">Copy AI Prompt</button><button class="btn ghost" onclick="sendAIToReport()">Send To Report Notes</button></div></div><div class="aiGrid wide"><div class="aiBox"><h3>Most Probable Direction</h3><pre id="aiDirection">Run AI Assist Output.</pre></div><div class="aiBox"><h3>Why It Picked This</h3><pre id="aiWhy">Run AI Assist Output.</pre></div><div class="aiBox"><h3>Next Scanner-Based Verification</h3><pre id="aiNext">Run AI Assist Output.</pre></div><div class="aiBox"><h3>Customer-Friendly Wording</h3><pre id="aiCustomer">Run AI Assist Output.</pre></div></div><div class="card wide"><h2>Copy/Paste AI Prompt</h2><textarea id="aiPromptBox" placeholder="Prompt appears here."></textarea></div></div></section>
+
+<section id="report" class="tab">
+  <div class="card">
+    <div class="sectionTitle">Final Step — Customer Report</div>
+    <h2><span class="badge green">R</span> Clear Customer Report</h2>
+    <p class="hint">This report is built for customers first: clean language, clear sections, easy to copy, download, or print.</p>
+    <div class="reportTools">
+      <button class="btn green" onclick="analyzeAll();buildReport()">Analyze + Build Report</button>
+      <button class="btn blue" onclick="copyReport()">Copy Plain Text</button>
+      <button class="btn amber" onclick="downloadReport()">Download TXT</button>
+      <button class="btn ghost" onclick="printModernReport()">Print / Save PDF</button>
+      <button class="btn ghost" onclick="saveJob()">Save Job</button>
+    </div>
+    <div id="modernReportBox" class="reportModern">
+      <div class="reportHero">
+        <div>
+          <div class="reportBrand">AUTOMEDIC DIAGNOSTICS</div>
+          <div class="reportTag">We Give Answers, Not Codes.</div>
+        </div>
+        <div class="reportBadge">Report Not Built Yet</div>
+      </div>
+      <div class="reportBody">
+        <div class="reportSection amber">
+          <h3>Next Action</h3>
+          <div class="reportText">Tap <b>Analyze + Build Report</b> after Customer Intake, VIN Pull, Scanner Intake, Values, and Guided Steps are complete.</div>
+        </div>
+      </div>
+    </div>
+    <details style="margin-top:14px">
+      <summary>Plain Text Report</summary>
+      <pre id="reportBox" class="reportPlain">Report will appear here.</pre>
+    </details>
+  </div>
+</section>
+
+<section id="history" class="tab"><div class="grid"><div class="card wide"><h2><span class="badge blue">H</span> Job History</h2><div class="btns"><button class="btn green" onclick="saveJob()">Save Current Job</button><button class="btn blue" onclick="exportHistory()">Export History</button><button class="btn ghost" onclick="importHistory()">Import History</button><button class="btn red" onclick="clearHistory()">Clear All</button></div><div id="historyList"></div></div></div></section>
+</div>
+<div class="bottomBar"><button class="btn green" onclick="showTab('customer')">Customer</button><button class="btn blue" onclick="showTab('vinprofile')">VIN Pull</button><button class="btn blue" onclick="showTab('intake')">Scanner Intake</button><button class="btn ghost" onclick="buildAIOutput();showTab('ai')">AI Assist</button><button class="btn amber" onclick="analyzeAll();showTab('analyze')">Analyze</button></div>
+
+<script>
+// ============================================================
+// AutoMedic Pinpoint Pro V42 — Clean JS
+// Single-definition architecture. No wrapper chains.
+// All bugs from V27–V40 resolved at root cause.
+// ============================================================
+
+// ── Core utilities ──────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const qsa = s => Array.from(document.querySelectorAll(s));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const val = id => ($(id)?.value || '').trim();
+const set = (id, v) => { if ($(id)) $(id).value = v ?? ''; };
+const put = (id, html) => { if ($(id)) $(id).innerHTML = html; };
+const num = id => { const m = val(id).replace(/,/g, '.').match(/[-+]?\d+(?:\.\d+)?/); return m ? parseFloat(m[0]) : null; };
+const VIN_RE = /^[A-HJ-NPR-Z0-9]{17}$/i;
+
+// ── Global state ─────────────────────────────────────────────
+let dtcs = [], modules = [], attachments = [], lastResult = null, lastReport = '', lastAI = '';
+let uploadMode = 'live'; // 'live' | 'dtc' | 'freeze' | 'auto'
+let userEdited = new Set();
+let restoringDraft = false;
+let lastPhotoOCRDone = false;
+let ocrRunning = false;
+let qrStream = null, qrTimer = null;
+let aiChatHistory = [];
+const DRAFT_KEY = 'automedicDraftV41';
+const JOBS_KEY = 'automedicJobsV24';
+
+// ── Text utilities ────────────────────────────────────────────
+function cleanText(t) {
+  return String(t || '').replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, ' ').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+}
+function first(text, re) {
+  const m = String(text || '').match(re);
+  return m ? (m[1] || m[0]).trim() : '';
+}
+function allDtc(text) {
+  return [...new Set((String(text || '').match(/\b[PCBU][0-9A-F]{4}\b/gi) || []).map(x => x.toUpperCase()))];
+}
+
+// ── UI / Nav ──────────────────────────────────────────────────
+function showTab(id) {
+  qsa('.tab').forEach(t => t.classList.remove('active'));
+  $(id)?.classList.add('active');
+  qsa('#nav button').forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+  qsa('.flowStep').forEach(b => b.classList.toggle('active', b.dataset.flow === id));
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
+qsa('#nav button').forEach(b => b.onclick = () => showTab(b.dataset.tab));
+
+function setStatus(id, msg, cls = 'ok') {
+  const el = $(id); if (!el) return;
+  el.className = cls; el.textContent = msg;
+}
+
+// ── Header shrink (single scroll listener) ───────────────────
+function headerShrink() {
+  const h = $('appHeader'), y = scrollY || 0;
+  if (!h) return;
+  if (!h.dataset.state) h.dataset.state = 'big';
+  if (h.dataset.state === 'big' && y > 110) { h.classList.add('shrink'); h.dataset.state = 'small'; }
+  else if (h.dataset.state === 'small' && y < 35) { h.classList.remove('shrink'); h.dataset.state = 'big'; }
+}
+window.addEventListener('scroll', () => requestAnimationFrame(headerShrink), { passive: true });
+
+// ── Action Center ─────────────────────────────────────────────
+// Visible ONLY while an action is running. Hidden otherwise.
+let actionHideTimer = null;
+
+function actionShow() {
+  const ac = $('actionCenter'); if (!ac) return;
+  clearTimeout(actionHideTimer);
+  ac.classList.add('actionActive');
+}
+function actionHide(delay = 0) {
+  clearTimeout(actionHideTimer);
+  actionHideTimer = setTimeout(() => {
+    $('actionCenter')?.classList.remove('actionActive');
+  }, delay);
+}
+
+let actionLog = [];
+function actionStart(name, pct = 8) {
+  actionLog = [];
+  actionShow();
+  if ($('actionTitle')) $('actionTitle').textContent = name;
+  if ($('actionState')) { $('actionState').textContent = 'IN PROCESS'; $('actionState').className = 'actionState running'; }
+  if ($('actionProgressBar')) $('actionProgressBar').style.width = pct + '%';
+  _actionLogPush(name, 'run');
+}
+function actionStep(msg, type = 'run', pct = null) {
+  if (pct !== null && $('actionProgressBar')) $('actionProgressBar').style.width = Math.max(0, Math.min(100, pct)) + '%';
+  _actionLogPush(msg, type);
+}
+function actionDone(msg = 'Completed.') {
+  if ($('actionTitle')) $('actionTitle').textContent = msg;
+  if ($('actionState')) { $('actionState').textContent = 'COMPLETED'; $('actionState').className = 'actionState done'; }
+  if ($('actionProgressBar')) $('actionProgressBar').style.width = '100%';
+  _actionLogPush(msg, 'done');
+  actionHide(2000); // auto-hide 2s after done
+}
+function actionError(msg = 'Action failed.') {
+  if ($('actionTitle')) $('actionTitle').textContent = msg;
+  if ($('actionState')) { $('actionState').textContent = 'NEEDS ATTENTION'; $('actionState').className = 'actionState error'; }
+  _actionLogPush(msg, 'err');
+  actionHide(4000);
+}
+function _actionLogPush(msg, type) {
+  const time = new Date().toLocaleTimeString();
+  actionLog.unshift({ msg, time, type });
+  actionLog = actionLog.slice(0, 10);
+  if ($('actionLog')) {
+    $('actionLog').innerHTML = actionLog.map(x =>
+      `<div class="${x.type}"><b>${esc(x.time)}</b> — ${esc(x.msg)}</div>`
+    ).join('');
+  }
+}
+
+// ── VIN ───────────────────────────────────────────────────────
+function syncVin(v) {
+  v = (v || '').toUpperCase().replace(/[^A-HJ-NPR-Z0-9]/g, '').slice(0, 17);
+  set('vin', v); set('vinProfileInput', v); ready();
+}
+
+async function fetchJSON(url) {
+  var timeout = new Promise(function(_, rej) {
+    setTimeout(function() { rej(new Error('Request timed out — check connection and retry.')); }, 10000);
+  });
+  var req = fetch(url, { cache: 'no-store' }).then(function(r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  });
+  return Promise.race([req, timeout]);
+}
+
+async function pullVinProfile() {
+  let vin = (val('vin') || val('vinProfileInput')).toUpperCase();
+  syncVin(vin);
+  if (!VIN_RE.test(vin)) {
+    setStatus('vinCustomerStatus', 'Enter a valid 17-character VIN (no I, O, Q).', 'bad');
+    setStatus('vinProfileStatus', 'Enter a valid 17-character VIN.', 'bad');
+    return;
+  }
+  actionStart('Pulling VIN profile...', 10);
+  setStatus('vinCustomerStatus', 'Pulling VIN profile...', 'warn');
+  setStatus('vinProfileStatus', 'Pulling vehicle decode, recalls, and complaint patterns...', 'warn');
+  try {
+    actionStep('Fetching NHTSA VIN decode...', 'run', 20);
+    const dec = await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/' + encodeURIComponent(vin) + '?format=json');
+    const v = (dec.Results && dec.Results[0]) || {};
+    if (v.ModelYear) set('year', v.ModelYear);
+    if (v.Make) set('make', v.Make);
+    if (v.Model) set('model', v.Model);
+    if (v.FuelTypePrimary) set('fuelType', v.FuelTypePrimary);
+    const eng = [v.DisplacementL ? v.DisplacementL + 'L' : '', v.EngineCylinders ? v.EngineCylinders + ' cyl' : '', v.EngineConfiguration || '', v.FuelTypePrimary || ''].filter(Boolean).join(' ');
+    if (eng) set('engine', eng);
+    const trans = [v.TransmissionStyle || '', v.TransmissionSpeeds ? v.TransmissionSpeeds + ' speed' : ''].filter(Boolean).join(' ');
+    if (trans) set('transmission', trans);
+    $('vinDecodeOut').textContent = Object.entries(v).filter(([k, x]) => x && String(x).trim()).map(([k, x]) => k + ': ' + x).join('\n') || 'No decode fields returned.';
+    actionStep('VIN decoded.', 'done', 45);
+  } catch (e) { $('vinDecodeOut').textContent = 'VIN decode failed: ' + e.message + '\nCheck VIN is 17 chars with no I/O/Q. NHTSA may be temporarily unavailable — retry in 30s.'; setStatus('vinProfileStatus', 'VIN decode failed — check VIN and retry.', 'bad'); }
+  try {
+    const year = val('year'), make = val('make'), model = val('model');
+    if (year && make && model) {
+      actionStep('Fetching recalls...', 'run', 55);
+      const rec = await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make=' + encodeURIComponent(make) + '&model=' + encodeURIComponent(model) + '&modelYear=' + encodeURIComponent(year));
+      const recalls = rec.results || rec.Results || [];
+      set('recallCount', recalls.length);
+      $('recallOut').textContent = recalls.length ? recalls.slice(0, 10).map((r, i) => (i + 1) + '. ' + (r.NHTSACampaignNumber || 'Campaign') + ' | ' + (r.Component || '') + '\n' + String(r.Summary || r.Consequence || '').slice(0, 350)).join('\n\n') : 'No recalls returned. Verify VIN-specific status at NHTSA/OEM.';
+    }
+  } catch (e) { $('recallOut').textContent = 'Recall pull failed: ' + e.message; }
+  try {
+    const year = val('year'), make = val('make'), model = val('model');
+    if (year && make && model) {
+      actionStep('Fetching complaint patterns...', 'run', 72);
+      const comp = await fetchJSON('https://api.nhtsa.gov/complaints/complaintsByVehicle?make=' + encodeURIComponent(make) + '&model=' + encodeURIComponent(model) + '&modelYear=' + encodeURIComponent(year));
+      const rows = comp.results || comp.Results || [];
+      const counts = {};
+      rows.forEach(c => { const key = String(c.Component || 'UNKNOWN').split(',')[0].trim(); counts[key] = (counts[key] || 0) + 1; });
+      const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 10);
+      set('patternCount', top.length);
+      $('patternOut').textContent = (top.length ? 'Top complaint patterns:\n' + top.map(([k, n], i) => (i + 1) + '. ' + k + ': ' + n).join('\n') : 'No complaint patterns returned.') + '\n\nVIN-Based Baseline Profile:\n' + buildBaselineProfile();
+    }
+  } catch (e) { $('patternOut').textContent = 'Pattern pull failed: ' + e.message + '\n\n' + buildBaselineProfile(); }
+  rememberVin();
+  updateVehicleViews();
+  ready();
+  setStatus('vinCustomerStatus', 'VIN Pull complete. Next step: Scanner Intake.', 'ok');
+  setStatus('vinProfileStatus', 'VIN Pull complete. Vehicle profile built.', 'ok');
+  actionDone('VIN Pull completed.');
+}
+
+async function pullVinProfileInline() {
+  const snap = safeCustomerSnap();
+  await pullVinProfile();
+  restoreCustomer(snap);
+  showTab('customer');
+}
+async function pullVinProfileCenter() {
+  const snap = safeCustomerSnap();
+  await pullVinProfile();
+  restoreCustomer(snap);
+}
+
+function buildBaselineProfile() {
+  const L = parseFloat(val('engine').match(/(\d+(?:\.\d+)?)L/)?.[1] || '');
+  const lines = ['Battery KOEO: 12.4V+ preferred', 'Charging: 13.2–15.0V', 'Fuel Trim Normal: +/-10%; +/-15% needs attention', 'ECT Warm: 185–220°F', 'MAP Warm Idle: ~25–45 kPa', 'O2 Narrowband: upstream switching 0.1–0.9V'];
+  if (Number.isFinite(L)) lines.push('MAF Warm Idle Estimate: ~' + (L * 0.7).toFixed(1) + '–' + (L * 1.2).toFixed(1) + ' g/s');
+  lines.push('Exact specs require ALLDATA/Mitchell/Identifix/OEM service info.');
+  return lines.join('\n');
+}
+
+function rememberVin() {
+  if (!VIN_RE.test(val('vin'))) return;
+  localStorage.setItem('automedicLastVinV24', JSON.stringify({ vin: val('vin'), year: val('year'), make: val('make'), model: val('model'), engine: val('engine'), transmission: val('transmission'), fuelType: val('fuelType'), time: new Date().toLocaleString() }));
+  renderLastVin();
+}
+function renderLastVin() {
+  let item = null;
+  try { item = JSON.parse(localStorage.getItem('automedicLastVinV24') || 'null'); } catch (e) {}
+  $('lastVinText').textContent = item ? [item.vin, [item.year, item.make, item.model].filter(Boolean).join(' ')].filter(Boolean).join(' • ') : '—';
+}
+function useLastVin() {
+  let item = null;
+  try { item = JSON.parse(localStorage.getItem('automedicLastVinV24') || 'null'); } catch (e) {}
+  if (!item) { alert('No remembered VIN yet.'); return; }
+  const snap = safeCustomerSnap();
+  ['vin', 'year', 'make', 'model', 'engine', 'transmission', 'fuelType'].forEach(k => set(k, item[k] || ''));
+  restoreCustomer(snap);
+  syncVin(item.vin);
+  setStatus('vinCustomerStatus', 'Last VIN loaded. Customer info stayed untouched.', 'ok');
+  ready();
+}
+function clearLastVin() { localStorage.removeItem('automedicLastVinV24'); renderLastVin(); }
+
+// ── Customer field protection ─────────────────────────────────
+function safeCustomerSnap() {
+  return { customerName: val('customerName'), customerPhone: val('customerPhone'), workOrder: val('workOrder'), complaint: val('complaint'), plate: val('plate'), plateState: val('plateState'), mileage: val('mileage') };
+}
+function restoreCustomer(snap) {
+  Object.entries(snap || {}).forEach(([id, v]) => { if (v && $(id)) $(id).value = v; });
+}
+
+// setSafe: only sets a field if it's empty OR if overwrite flag is passed.
+// For customer fields that the user has manually edited, never overwrites.
+function setSafe(id, v, opts = {}) {
+  const el = $(id); if (!el) return false;
+  const next = String(v ?? '').trim(); if (!next) return false;
+  const isCustomer = ['customerName', 'customerPhone', 'workOrder', 'complaint', 'plate', 'plateState', 'mileage'].includes(id);
+  if (isCustomer && userEdited.has(id) && el.value.trim() && !opts.overwrite) return false;
+  if (!opts.overwrite && el.value.trim()) return false;
+  el.value = next;
+  el.classList.add('saveFlash');
+  setTimeout(() => el.classList.remove('saveFlash'), 350);
+  return true;
+}
+
+function markUserEdit(el) {
+  if (!el || !el.id || restoringDraft) return;
+  userEdited.add(el.id);
+}
+
+// ── Vehicle view sync ─────────────────────────────────────────
+function updateVehicleViews() {
+  set('v_vin', val('vin'));
+  set('v_plate', [val('plateState'), val('plate')].filter(Boolean).join(' '));
+  set('v_year', val('year'));
+  set('v_makeModel', [val('make'), val('model')].filter(Boolean).join(' '));
+  set('v_engine', val('engine'));
+  set('v_transmission', val('transmission'));
+  set('v_fuel', val('fuelType'));
+  set('v_mileage', val('mileage'));
+  ['Year', 'Make', 'Model', 'Transmission', 'Engine', 'Fuel'].forEach(x => {
+    const el = $('snap' + x);
+    const src = { Year: 'year', Make: 'make', Model: 'model', Transmission: 'transmission', Engine: 'engine', Fuel: 'fuelType' }[x];
+    if (el) el.textContent = val(src) || '—';
+  });
+  if ($('snapRecall')) $('snapRecall').textContent = val('recallCount') || '0';
+  if ($('snapPattern')) $('snapPattern').textContent = val('patternCount') || '—';
+}
+
+// ── Ready / progress ──────────────────────────────────────────
+function ready() {
+  updateVehicleViews();
+  renderLastVin();
+  updateMissing();
+  const required = ['customerName', 'complaint', 'vin', 'year', 'make', 'model'];
+  let filled = required.filter(id => val(id)).length;
+  if (dtcs.length) filled++;
+  if (val('stft1') || val('mapKpa') || val('ftpPressure')) filled++;
+  const pct = Math.min(100, Math.round(filled / 8 * 100));
+  $('topReady').innerHTML = pct + '%<br>READY';
+}
+
+// ── OCR text normalizer ───────────────────────────────────────
+function normalizeOCR(text) {
+  return cleanText(text)
+    .replace(/[|]/g, ' ')
+    .replace(/['']/g, "'")
+    .replace(/[""]/g, '"')
+    .replace(/\bSTF\s*T\b/gi, 'STFT')
+    .replace(/\bLTF\s*T\b/gi, 'LTFT')
+    .replace(/\bM\s*AF\b/gi, 'MAF')
+    .replace(/\bM\s*AP\b/gi, 'MAP');
+}
+
+// ── Live data parser ──────────────────────────────────────────
+// One canonical function. Uses line-based + flat-regex approach.
+// MK900BT uses full lowercase labels in table format:
+// "Short term fuel trim bank 1    -3    [-25...25]    %"
+// "HO2S bank 2 sensor 1           765   [0...1200]    mV"
+// Value sits between the label and the range bracket [...].
+// All patterns cover both abbreviated (STFT) and full MK900BT text.
+const LIVE_DATA_MAP = [
+  ['stft1', [
+    /short\s*term\s*fuel\s*trim\s*bank\s*1/i,
+    /STFT\s*(?:B|Bank)?\s*1/i,
+    /SHRTFT\s*(?:B|Bank)?\s*1/i,
+  ], { min: -50, max: 50 }],
+  ['ltft1', [
+    /long\s*term\s*fuel\s*trim\s*bank\s*1/i,
+    /LTFT\s*(?:B|Bank)?\s*1/i,
+    /LONGFT\s*(?:B|Bank)?\s*1/i,
+  ], { min: -50, max: 50 }],
+  ['stft2', [
+    /short\s*term\s*fuel\s*trim\s*bank\s*2/i,
+    /STFT\s*(?:B|Bank)?\s*2/i,
+    /SHRTFT\s*(?:B|Bank)?\s*2/i,
+  ], { min: -50, max: 50 }],
+  ['ltft2', [
+    /long\s*term\s*fuel\s*trim\s*bank\s*2/i,
+    /LTFT\s*(?:B|Bank)?\s*2/i,
+    /LONGFT\s*(?:B|Bank)?\s*2/i,
+  ], { min: -50, max: 50 }],
+  // O2 sensors — MK900BT uses HO2S not O2
+  ['o2b1s1', [
+    /HO2S\s*bank\s*1\s*sensor\s*1/i,
+    /O2\s*(?:sensor\s*)?bank\s*1\s*sensor\s*1/i,
+    /O2\s*B1S1/i,
+    /\bB1S1\b/i,
+  ], { min: 0, max: 1200 }],   // mV on MK900BT, not V
+  ['o2b2s1', [
+    /HO2S\s*bank\s*2\s*sensor\s*1/i,
+    /O2\s*(?:sensor\s*)?bank\s*2\s*sensor\s*1/i,
+    /O2\s*B2S1/i,
+    /\bB2S1\b/i,
+  ], { min: 0, max: 1200 }],
+  ['maf', [
+    /mass\s*air\s*flow/i,
+    /\bMAF\b/i,
+  ], { min: 0, max: 500 }],
+  // MK900BT "MAP sensor" screen shows Volts (1.34 V). Put it in mapVolts.
+  // mapKpa only catches explicit kPa label or "Manifold absolute pressure".
+  ['mapVolts', [
+    /MAP\s*sensor(?!\s*kpa)/i,
+    /MAP\s*(?:sensor\s*)?(?:V\b|volt|voltage)/i,
+  ], { min: 0, max: 6 }],
+  ['mapKpa', [
+    /manifold\s*absolute\s*pressure/i,
+    /MAP\s*(?:sensor\s*)?kPa/i,
+    /MAP\s*pressure/i,
+  ], { min: 0, max: 200 }],
+  ['ect', [
+    /engine\s*coolant\s*temp/i,
+    /coolant\s*temp/i,
+    /\bECT\b/i,
+  ], { min: -40, max: 300 }],
+  ['rpm', [
+    /engine\s*speed/i,
+    /\bRPM\b/i,
+  ], { min: 0, max: 9000 }],
+  ['tpsPct', [
+    /throttle\s*position\s*(?:sensor)?/i,
+    /\bTPS\b/i,
+  ], { min: 0, max: 100 }],
+  ['ftpPressure', [
+    /fuel\s*tank\s*pressure(?!\s*volt)/i,
+    /\bFTP\b(?!\s*volt)/i,
+  ], { min: -50, max: 50 }],
+  ['ftpVolts', [
+    /fuel\s*tank\s*pressure\s*volt/i,
+    /FTP\s*volt/i,
+  ], { min: 0, max: 6 }],
+  ['fuelTankPct', [
+    /fuel\s*(?:tank\s*)?level/i,
+    /fuel\s*tank(?!\s*pressure)/i,
+  ], { min: 0, max: 100 }],
+  ['baro', [
+    /barometric\s*pressure/i,
+    /\bBARO\b/i,
+  ], { min: 0, max: 20 }],  // psi on MK900BT (~14.7), kPa on others (~101)
+  ['afr', [
+    /air[\s-]*fuel\s*ratio/i,
+    /\bAFR\b/i,
+  ], { min: 0, max: 40 }],
+  ['batteryVolts', [
+    /control\s*module\s*voltage/i,
+    /system\s*voltage/i,
+    /battery\s*(?:voltage)?/i,
+    /\bVCI\b/i,
+  ], { min: 0, max: 20 }],
+];
+
+// pickNumber: built specifically for MK900BT table format.
+// Each row: "Label text      VALUE      [range]      unit"
+// Strategy: find the label line, then grab the FIRST number that appears
+// BEFORE the range bracket "[". That is always the live value.
+function pickNumber(text, labelRegexes, opts = {}) {
+  const src = normalizeOCR(text);
+  const lines = src.split('\n').map(l => l.trim()).filter(Boolean);
+
+  for (const re of labelRegexes) {
+    for (let i = 0; i < lines.length; i++) {
+      if (!re.test(lines[i])) continue;
+      // Combine this line + next 2 to handle value on next line
+      const window = [lines[i], lines[i + 1] || '', lines[i + 2] || ''].join(' ');
+      // Strip everything from the range bracket onward: [-25...25]
+      const beforeRange = window.replace(/\[.*$/, '');
+      // Remove the label itself
+      let after = beforeRange.replace(re, '');
+      // Remove unit words that OCR might leave
+      after = after.replace(/\b(mV|kPa|psi|g\/s|rpm|mph|km\/h|deg|degF|degC|volts?|%|°)\b/gi, ' ');
+      const nums = after.replace(/,/g, '.').match(/[-+]?\d+(?:\.\d+)?/g) || [];
+      let candidates = nums.map(Number).filter(n => isFinite(n));
+      if (opts.min !== undefined) candidates = candidates.filter(n => n >= opts.min);
+      if (opts.max !== undefined) candidates = candidates.filter(n => n <= opts.max);
+      if (candidates.length) return String(candidates[0]);
+    }
+  }
+
+  // Flat fallback for single-line dense OCR output
+  const flat = src.replace(/\n+/g, '  ');
+  for (const re of labelRegexes) {
+    // Match label, then capture first number before any [ bracket
+    const pattern = new RegExp(re.source + '[^\\[\\-+0-9]{0,60}([-+]?\\d+(?:\\.\\d+)?)', re.flags);
+    const m = flat.match(pattern);
+    if (m) {
+      const n = Number(m[1]);
+      if (isFinite(n) && (opts.min === undefined || n >= opts.min) && (opts.max === undefined || n <= opts.max)) return m[1];
+    }
+  }
+  return '';
+}
+
+function parseLiveData(text) {
+  let filled = 0;
+  for (const [id, labs, opts] of LIVE_DATA_MAP) {
+    const v = pickNumber(text, labs, opts || {});
+    if (v && setSafe(id, v)) filled++;
+  }
+  // Freeze frame
+  const freeze = first(text, /Freeze\s*Frame[\s\S]{0,120}\b([PCBU][0-9A-F]{4})\b/i)
+    || first(text, /Freeze\s*frame\s*data\s*[: ]+([PCBU][0-9A-F]{4})/i);
+  if (freeze) setSafe('freezeCode', freeze.toUpperCase(), { overwrite: true });
+  return filled;
+}
+
+// ── DTC utilities ─────────────────────────────────────────────
+const DTC_DESC = {
+  P0106: 'Manifold Absolute Pressure / BARO sensor range or performance',
+  P0122: 'Throttle Position Sensor / Switch A circuit low input',
+  P0452: 'Fuel Tank Pressure sensor / EVAP pressure sensor low input',
+  P1122: 'Throttle Position Sensor circuit intermittent low voltage',
+  P0171: 'System too lean Bank 1', P0174: 'System too lean Bank 2',
+  P0300: 'Random / multiple cylinder misfire', P0301: 'Cylinder 1 misfire',
+  P0302: 'Cylinder 2 misfire', P0303: 'Cylinder 3 misfire', P0304: 'Cylinder 4 misfire',
+  P0420: 'Catalyst efficiency below threshold Bank 1', P0430: 'Catalyst efficiency below threshold Bank 2',
+  P0440: 'EVAP system fault', P0442: 'EVAP small leak', P0455: 'EVAP large leak',
+  P0496: 'EVAP flow during non-purge', P0507: 'Idle speed higher than expected',
+  P0700: 'Transmission control system MIL request',
+  U1000: 'Class 2 / CAN communication malfunction',
+  U0100: 'Lost communication with ECM/PCM', U0101: 'Lost communication with TCM',
+  U0140: 'Lost communication with BCM',
+};
+
+function dtcGuessDesc(code) {
+  return DTC_DESC[code] || 'Code imported — look up exact OEM description for this vehicle.';
+}
+
+function priorityFor(code, status, desc) {
+  let p = 1;
+  if (/Current/i.test(status)) p += 2;
+  if (/Failed|MIL requested/i.test(status)) p += 2;
+  if (/^P0|^P1/.test(code)) p += 1;
+  if (/low voltage|sensor performance|intermittent/i.test(desc)) p += 1;
+  return p;
+}
+
+function statusAfter(lines, i) {
+  let s = [];
+  for (let j = i + 1; j < Math.min(lines.length, i + 8); j++) {
+    const l = lines[j];
+    if (/\b[PCBU][0-9A-F]{4}\b/.test(l) || /\(\s*\d+\s*DTCs?\s*\)/i.test(l)) break;
+    if (/Current|History|Pending|Permanent|MIL requested|Failed|Passed|This ignition|Last test|Since cleared/i.test(l)) s.push(l);
+  }
+  return s.join(' | ');
+}
+
+function parseDTCs(text) {
+  dtcs = [];
+  const lines = cleanText(text).split('\n').map(l => l.trim()).filter(Boolean);
+  let module = 'Unknown';
+  for (let i = 0; i < lines.length; i++) {
+    const l = lines[i];
+    const sec = l.match(/^(.+?)\s*\(\s*\d+\s*DTCs?\s*\)/i);
+    if (sec) { module = sec[1].trim(); continue; }
+    const codeMatches = [...l.matchAll(/\b([PCBU][0-9A-F]{4})\b/gi)];
+    if (!codeMatches.length || /DTC Description Status/i.test(l)) continue;
+    for (const cm of codeMatches) {
+      const code = cm[1].toUpperCase();
+      let after = l.slice(cm.index + code.length).trim().replace(/^[-:|,;\s]+/, '').trim();
+      let desc = after.replace(/\s*(Current|History|Pending|Permanent)\s*DTC.*$/i, '').trim();
+      if (!desc || /^[,;| -]*$/.test(desc) || /\b[PCBU][0-9A-F]{4}\b/i.test(desc)) desc = '';
+      if (!desc) {
+        const nextLines = [];
+        for (let j = i + 1; j < Math.min(lines.length, i + 4); j++) {
+          if (/\b[PCBU][0-9A-F]{4}\b/i.test(lines[j])) break;
+          if (/Current|History|Pending|Permanent|MIL requested|Failed|Passed/i.test(lines[j])) continue;
+          nextLines.push(lines[j]);
+        }
+        desc = nextLines.join(' ').trim();
+      }
+      if (!desc) desc = dtcGuessDesc(code);
+      const status = statusAfter(lines, i) || first(l, /(Current|History|Pending|Permanent)\s*DTC/i) || first(l, /\b(Current|History|Pending|Permanent)\b/i) || 'Unknown';
+      if (!dtcs.find(d => d.code === code)) {
+        dtcs.push({ module, code, desc, status, priority: priorityFor(code, status, desc) });
+      }
+    }
+  }
+  // Catch any codes that were missed
+  for (const code of allDtc(text)) {
+    if (!dtcs.find(d => d.code === code)) {
+      const desc = dtcGuessDesc(code);
+      dtcs.push({ module: 'Imported', code, desc, status: 'Imported', priority: priorityFor(code, 'Imported', desc) });
+    }
+  }
+  dtcs.sort((a, b) => b.priority - a.priority);
+  renderDTCTable();
+}
+
+function renderDTCTable() {
+  if ($('dtcCount')) $('dtcCount').textContent = dtcs.length;
+  put('dtcTable', dtcs.length ? dtcs.map(d =>
+    `<tr><td>${esc(d.module)}</td><td><b>${esc(d.code)}</b></td><td>${esc(d.desc)}</td><td>${esc(d.status)}</td><td>${d.priority}</td></tr>`
+  ).join('') : '<tr><td colspan="5">No DTCs imported.</td></tr>');
+  updateCodeReadReceipt();
+}
+
+function parseModules(text) {
+  modules = [];
+  const lines = cleanText(text).split('\n').map(l => l.trim()).filter(Boolean);
+  let on = false;
+  for (const line of lines) {
+    if (/System\s*Status\/DTC/i.test(line)) { on = true; continue; }
+    if (/^DTC\s*\(/i.test(line)) on = false;
+    if (on) {
+      const m = line.match(/^(.+?)\s+(\d+)$/);
+      if (m && !/Page|Status\/DTC|System Scanned/i.test(line)) modules.push({ name: m[1].trim(), count: parseInt(m[2]) });
+    }
+  }
+  if ($('moduleCount')) $('moduleCount').textContent = modules.length;
+  put('moduleTable', modules.length ? modules.map(m =>
+    `<tr><td>${esc(m.name)}</td><td>${m.count}</td></tr>`
+  ).join('') : '<tr><td colspan="2">No modules imported.</td></tr>');
+}
+
+// ── Master scanner text parser (single, clean) ────────────────
+function parseScannerText(text) {
+  text = cleanText(text);
+  const snap = safeCustomerSnap();
+  // VIN
+  const vin = first(text, /VIN:\s*([A-HJ-NPR-Z0-9]{17})/i) || first(text, /\b([A-HJ-NPR-Z0-9]{17})\b/i);
+  if (vin) syncVin(vin);
+  // Vehicle from slash-delimited format: 2002/GM/Cadillac/...
+  const vehicle = first(text, /(\d{4}\s*\/\s*[^\/\n]+\s*\/\s*[^\/\n]+\s*\/?[^\n]*)/i);
+  if (vehicle) {
+    const p = vehicle.split('/').map(x => x.trim()).filter(Boolean);
+    if (p[0]) setSafe('year', (p[0].match(/\d{4}/) || [p[0]])[0], { overwrite: !val('year') });
+    if (p[1]) setSafe('make', p[1], { overwrite: !val('make') });
+    if (p[2]) setSafe('model', p[2], { overwrite: !val('model') });
+  }
+  // Odometer
+  const odo = first(text, /(?:Odometer\s*Reading|Mileage)\s*:?\s*([0-9,]+)\s*miles?/i);
+  if (odo) setSafe('mileage', odo.replace(/,/g, ''));
+  // License plate
+  const plate = first(text, /License\s*Plate:\s*([A-Z0-9\- ]+)/i);
+  if (plate) setSafe('plate', plate.split(/\s/)[0]);
+  // Customer name / phone (only if not user-edited)
+  const cname = first(text, /Customer\s*Information[\s\S]{0,90}?Name:\s*([^\n]+?)\s+Tel:/i) || first(text, /Name:\s*([^\n]+?)\s+Tel:/i);
+  if (cname) setSafe('customerName', cname.trim());
+  const cphone = first(text, /Tel:\s*([0-9\-(). ]{7,})/i);
+  if (cphone) setSafe('customerPhone', cphone.replace(/\D/g, ''));
+  // Scanner info
+  const scanner = first(text, /Scanner:\s*([^\n]+?)(?:\s+Version:|$)/i);
+  const ver = first(text, /Version:\s*([^\n ]+)/i);
+  if (scanner) setSafe('scanner', scanner, { overwrite: true });
+  if (ver) setSafe('scannerVersion', ver, { overwrite: true });
+  const rid = first(text, /Report\s*ID:\s*([^\n]+)/i);
+  if (rid) setSafe('reportId', rid, { overwrite: true });
+  const tt = first(text, /Test\s*Time:\s*([^\n]+)/i);
+  if (tt) setSafe('testTime', tt, { overwrite: true });
+  // Parse modules, DTCs, live data
+  parseModules(text);
+  parseDTCs(text);
+  parseLiveData(text);
+  // Always restore customer fields that were user-edited
+  Object.entries(snap).forEach(([id, v]) => {
+    if (v && userEdited.has(id) && $(id)) $(id).value = v;
+  });
+  ready();
+  updateIntakeCompletion();
+}
+
+// ── Completion tracking ───────────────────────────────────────
+function missingItems() {
+  const m = [];
+  if (!val('customerName')) m.push('Customer name');
+  if (!val('complaint')) m.push('Customer complaint / symptom');
+  if (!val('vin')) m.push('VIN');
+  if (!dtcs.length) m.push('Full system DTC report');
+  if (!val('freezeCode')) m.push('Engine freeze frame');
+  if (!val('stft1') && !val('ltft1')) m.push('Warm idle fuel trims');
+  if (!val('o2b1s1')) m.push('O2 sensor live data');
+  if (dtcs.some(d => /P0452|P044|EVAP|Fuel Tank Pressure/i.test(d.code + ' ' + d.desc)) && !val('ftpPressure')) m.push('EVAP / FTP PID screen');
+  if (dtcs.some(d => /P0122|P1122|P0106|P0452/i.test(d.code)) && !val('mapVolts')) m.push('MAP/TPS/FTP voltage live data');
+  return m;
+}
+
+function updateMissing() {
+  const miss = missingItems();
+  if ($('missingCount')) $('missingCount').textContent = miss.length;
+  if ($('missingList')) $('missingList').innerHTML = miss.length ? miss.map(x => '• ' + esc(x)).join('<br>') : 'All core items are present for a first-pass analysis.';
+}
+
+function setDone(id, done, label) {
+  const el = $(id); if (!el) return;
+  el.classList.toggle('done', !!done);
+  el.classList.toggle('warnitem', !done && !!label && label !== 'Waiting' && label !== 'Optional');
+  const span = el.querySelector('span');
+  if (span) span.textContent = label || (done ? 'Complete' : 'Waiting');
+}
+
+function updateIntakeCompletion() {
+  const textPresent = !!val('scannerText').trim();
+  const vehicleReady = !!(val('vin') || (val('year') && val('make') && val('model')));
+  const codesReady = dtcs.length > 0;
+  const modulesReady = modules.length > 0;
+  const liveIds = ['stft1', 'ltft1', 'stft2', 'ltft2', 'maf', 'mapKpa', 'mapVolts', 'ect', 'rpm', 'tpsPct', 'ftpPressure', 'ftpVolts', 'fuelTankPct', 'baro', 'afr', 'batteryVolts', 'o2b1s1', 'o2b2s1'];
+  const liveCount = liveIds.filter(id => val(id)).length;
+  const freezeReady = !!val('freezeCode') || /freeze\s*frame/i.test(val('scannerText'));
+  const readyToAnalyze = vehicleReady && codesReady && (liveCount > 0 || freezeReady || modulesReady);
+  setDone('doneReportText', textPresent, textPresent ? 'Complete' : 'Waiting');
+  setDone('doneVehicle', vehicleReady, vehicleReady ? 'Complete' : 'Waiting');
+  setDone('doneCodes', codesReady, codesReady ? dtcs.length + ' code(s)' : 'Waiting');
+  setDone('doneModules', modulesReady, modulesReady ? modules.length + ' module(s)' : 'Waiting');
+  setDone('doneLiveData', liveCount > 0, liveCount > 0 ? liveCount + ' value(s)' : 'Need live data');
+  setDone('doneFreeze', freezeReady, freezeReady ? 'Complete' : 'Optional');
+  setDone('donePhoto', lastPhotoOCRDone, lastPhotoOCRDone ? 'Complete' : 'Optional');
+  setDone('doneReady', readyToAnalyze, readyToAnalyze ? 'Ready' : 'Need more data');
+  updateMissing();
+  autoSaveDraft();
+}
+
+function updateCodeReadReceipt() {
+  const box = $('codeReadReceipt'); if (!box) return;
+  box.textContent = dtcs.length
+    ? 'Codes read:\n' + dtcs.map(d => d.code + ' — ' + d.desc + ' — ' + d.status).join('\n')
+    : 'No pasted codes read yet.';
+}
+
+// ── Auto-fill receipt ─────────────────────────────────────────
+function showAutoFillReceipt(source, kind = 'ok') {
+  const box = $('autoFillReceipt'); if (!box) return;
+  const liveIds = ['stft1', 'ltft1', 'stft2', 'ltft2', 'maf', 'mapKpa', 'mapVolts', 'ect', 'rpm', 'tpsPct', 'ftpPressure', 'ftpVolts', 'fuelTankPct', 'baro', 'afr', 'batteryVolts', 'o2b1s1', 'o2b2s1', 'freezeCode'];
+  const found = liveIds.filter(id => val(id)).map(id => id + '=' + val(id));
+  box.className = 'autoFillReceipt ' + (kind === 'bad' ? 'bad' : kind === 'warn' ? 'warn' : '');
+  box.textContent = [
+    'AUTO-FILL: ' + source,
+    'Vehicle: ' + ([val('year'), val('make'), val('model')].filter(Boolean).join(' ') || '—'),
+    'VIN: ' + (val('vin') || '—'),
+    'DTCs: ' + dtcs.length + (dtcs.length ? ' (' + dtcs.map(d => d.code).slice(0, 12).join(', ') + ')' : ''),
+    'Modules: ' + modules.length,
+    'Live values: ' + (found.length ? found.join(', ') : 'none yet'),
+    'Missing: ' + (missingItems().join(', ') || 'none for first pass'),
+  ].join('\n');
+}
+
+// ── Import orchestration ──────────────────────────────────────
+async function runScannerImport(runAnalyze) {
+  const text = val('scannerText');
+  if (!text) { alert('Paste, upload, OCR, or QR scanner data first.'); return; }
+  actionStart('Scanner import + auto-fill in process...', 10);
+  actionStep('Protecting customer fields and reading report text...', 'run', 20);
+  const snap = safeCustomerSnap();
+  parseScannerText(text);
+  restoreCustomer(snap);
+  const live = ['stft1', 'ltft1', 'stft2', 'ltft2', 'maf', 'mapKpa', 'mapVolts', 'ect', 'tpsPct', 'ftpPressure', 'fuelTankPct', 'baro', 'afr', 'o2b1s1', 'o2b2s1'].filter(id => val(id)).map(id => id + '=' + val(id));
+  $('importSummary').value = [
+    'SCANNER INTAKE SUMMARY',
+    'Vehicle: ' + [val('year'), val('make'), val('model')].filter(Boolean).join(' '),
+    'VIN: ' + val('vin'),
+    'Scanner: ' + [val('scanner'), val('scannerVersion')].filter(Boolean).join(' '),
+    'Modules: ' + modules.length,
+    'DTCs: ' + dtcs.length + (dtcs.length ? ' (' + dtcs.map(d => d.code).slice(0, 10).join(', ') + ')' : ''),
+    'Live values: ' + (live.length ? live.join(', ') : 'none yet'),
+    'Missing: ' + missingItems().join(', '),
+  ].join('\n');
+  updateIntakeCompletion();
+  showAutoFillReceipt('Scanner import');
+  actionStep('Import complete.', 'done', 90);
+  setStatus('intakeStatus', 'Import complete. Review Values or Analyze.', 'ok');
+  if (runAnalyze) { analyzeAll(); showTab('analyze'); actionDone('Import + analyze complete.'); }
+  else { showTab('values'); actionDone('Import complete.'); }
+}
+
+function readCodesOnly() {
+  const text = val('scannerText');
+  if (!text.trim()) { alert('Paste codes into the Scanner Intake text box first.'); return; }
+  actionStart('Reading pasted codes...', 10);
+  parseDTCs(text);
+  updateIntakeCompletion();
+  showAutoFillReceipt('Read codes only');
+  if (dtcs.length) actionDone('Codes read: ' + dtcs.map(d => d.code).join(', '));
+  else actionError('No valid DTC codes found. Use format like P0106, P0122, P0452.');
+  setStatus('intakeStatus', dtcs.length ? 'Codes read. Analyze or add live data.' : 'No codes found. Use format like P0106, P0122.', dtcs.length ? 'ok' : 'bad');
+}
+
+async function pasteFromClipboard() {
+  try {
+    const txt = await navigator.clipboard.readText();
+    set('scannerText', (val('scannerText') + '\n' + txt).trim());
+    actionStart('Clipboard pasted. Auto-filling...', 10);
+    const snap = safeCustomerSnap();
+    parseScannerText(val('scannerText'));
+    restoreCustomer(snap);
+    updateIntakeCompletion();
+    showAutoFillReceipt('Clipboard paste');
+    actionDone(dtcs.length ? 'Clipboard pasted. Codes read: ' + dtcs.map(d => d.code).join(', ') : 'Clipboard pasted.');
+    setStatus('intakeStatus', 'Clipboard pasted and auto-filled.', 'ok');
+  } catch (e) {
+    alert('Clipboard permission blocked. Paste manually.');
+  }
+}
+
+// ── File upload (single handler, assigned once at init) ───────
+// ── Upload mode selector ──────────────────────────────────────
+const UPLOAD_MODE_LABELS = {
+  live:   { label: 'Live Data',   desc: 'will extract fuel trims, MAP, O2, RPM, ECT, TPS and other PIDs.' },
+  dtc:    { label: 'DTC / Codes', desc: 'will extract DTC codes and module list only.' },
+  freeze: { label: 'Freeze Frame',desc: 'will extract freeze frame values and trigger code.' },
+  auto:   { label: 'Auto-Detect', desc: 'will try all parsers (slower, may pick up false values from graph screens).' },
+};
+
+function setUploadMode(mode, btn) {
+  uploadMode = mode;
+  qsa('.uploadModeBtn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  const info = UPLOAD_MODE_LABELS[mode] || UPLOAD_MODE_LABELS.auto;
+  const lbl = $('uploadModeLabel');
+  if (lbl) lbl.innerHTML = 'Mode: <b>' + info.label + '</b> — ' + info.desc;
+}
+
+// Route OCR text to the correct parser based on selected mode
+function routeByMode(text, mode) {
+  const snap = safeCustomerSnap();
+  switch (mode) {
+    case 'live':
+      // Live data only — no DTC parsing, no full scanner text parse
+      parseLiveData(text);
+      break;
+    case 'dtc':
+      // DTC + modules only — no live data
+      parseModules(text);
+      parseDTCs(text);
+      break;
+    case 'freeze':
+      // Freeze frame: pull live data values AND the trigger code
+      parseLiveData(text);
+      // Also catch any DTCs on the freeze frame screen
+      parseDTCs(text);
+      break;
+    case 'auto':
+    default:
+      // Full parse — same as before
+      parseScannerText(text);
+      break;
+  }
+  restoreCustomer(snap);
+  updateVehicleViews();
+  ready();
+  updateIntakeCompletion();
+}
+
+function handleFileUpload(e) {
+  const files = [...e.target.files];
+  if (!files.length) return;
+  const textFiles = files.filter(f => /\.(txt|csv|log|html|json|xml)$/i.test(f.name) || f.type.startsWith('text/'));
+  const imageFiles = files.filter(f => f.type.startsWith('image/') || /\.(jpg|jpeg|png|webp|heic|heif)$/i.test(f.name));
+  const others = files.filter(f => !textFiles.includes(f) && !imageFiles.includes(f));
+  const modeInfo = UPLOAD_MODE_LABELS[uploadMode] || UPLOAD_MODE_LABELS.auto;
+  if ($('fileList')) $('fileList').textContent = files.map(f => f.name).join(', ');
+  actionStart('Upload (' + modeInfo.label + ' mode) in process...', 8);
+  (async () => {
+    // Text files: route by mode
+    if (textFiles.length) {
+      actionStep('Reading ' + textFiles.length + ' text file(s) in ' + modeInfo.label + ' mode...', 'run', 20);
+      for (const f of textFiles) {
+        const txt = await f.text();
+        set('scannerText', (val('scannerText') + '\n' + txt).trim());
+      }
+      routeByMode(val('scannerText'), uploadMode);
+    }
+    // Non-image, non-text files: save as evidence only
+    if (others.length) others.forEach(f => attachments.push({ name: f.name, type: f.type }));
+    // Image files: OCR then route by mode
+    if (imageFiles.length) {
+      actionStep('OCR reading ' + imageFiles.length + ' screenshot(s) in ' + modeInfo.label + ' mode...', 'run', 40);
+      await runScreenshotBatchOCR(imageFiles, uploadMode);
+    } else {
+      showAutoFillReceipt(modeInfo.label + ' upload');
+      actionDone(modeInfo.label + ' upload complete.');
+    }
+    // Reset file input so the same file can be uploaded again if needed
+    e.target.value = '';
+  })();
+}
+
+// ── OCR pipeline ──────────────────────────────────────────────
+async function loadScript(src) {
+  return new Promise((res, rej) => {
+    if (document.querySelector(`script[src="${src}"]`)) { res(); return; }
+    const s = document.createElement('script');
+    s.src = src; s.onload = res; s.onerror = () => rej(new Error('Could not load ' + src));
+    document.head.appendChild(s);
+  });
+}
+
+async function prepareImageForOCR(file, deg = 0) {
+  const fast = $('fastOcrMode') ? $('fastOcrMode').checked : true;
+  const maxSide = fast ? 1400 : 2200;
+  let img;
+  if (window.createImageBitmap) {
+    try { img = await createImageBitmap(file); } catch (e) {}
+  }
+  if (!img) {
+    img = await new Promise((res, rej) => {
+      const i = new Image(); i.onload = () => res(i); i.onerror = rej;
+      i.src = URL.createObjectURL(file);
+    });
+  }
+  const iw = img.width, ih = img.height;
+  const scale = Math.min(1, maxSide / Math.max(iw, ih));
+  const w = Math.max(1, Math.round(iw * scale)), h = Math.max(1, Math.round(ih * scale));
+  const swap = deg === 90 || deg === 270;
+  const canvas = document.createElement('canvas');
+  canvas.width = swap ? h : w; canvas.height = swap ? w : h;
+  const ctx = canvas.getContext('2d', { willReadFrequently: true });
+  ctx.save(); ctx.translate(canvas.width / 2, canvas.height / 2);
+  ctx.rotate(deg * Math.PI / 180); ctx.drawImage(img, -w / 2, -h / 2, w, h); ctx.restore();
+  if (fast) {
+    try {
+      const data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const px = data.data;
+      for (let i = 0; i < px.length; i += 4) {
+        let g = 0.299 * px[i] + 0.587 * px[i + 1] + 0.114 * px[i + 2];
+        g = Math.max(0, Math.min(255, (g - 128) * 1.35 + 128));
+        px[i] = px[i + 1] = px[i + 2] = g;
+      }
+      ctx.putImageData(data, 0, 0);
+    } catch (e) {}
+  }
+  return canvas;
+}
+
+function queueRow(name, status, cls = 'warntxt') {
+  const q = $('screenshotQueue'); if (!q) return;
+  if (q.textContent.includes('No scanner screenshots')) q.innerHTML = '';
+  const div = document.createElement('div');
+  div.className = 'row';
+  div.innerHTML = `<span>${esc(name)}</span><span class="${cls}">${esc(status)}</span>`;
+  q.appendChild(div); q.scrollTop = q.scrollHeight;
+}
+
+function showOcrReceipt(kind, msg) {
+  let box = $('ocrReceiptBox');
+  if (!box) {
+    box = document.createElement('div'); box.id = 'ocrReceiptBox'; box.className = 'ocrReceipt';
+    const st = $('ocrStatus');
+    if (st && st.parentNode) st.parentNode.appendChild(box);
+  }
+  box.className = 'ocrReceipt ' + (kind === 'bad' ? 'badReceipt' : kind === 'warn' ? 'warnReceipt' : '');
+  box.textContent = msg;
+}
+
+async function runScreenshotBatchOCR(files, mode) {
+  mode = mode || uploadMode || 'auto';
+  const imgs = [...files].filter(f => f.type.startsWith('image/') || /\.(jpg|jpeg|png|webp|heic|heif)$/i.test(f.name));
+  if (!imgs.length) return;
+  const fast = $('fastOcrMode') ? $('fastOcrMode').checked : true;
+  ocrRunning = true;
+  if ($('screenshotQueue')) $('screenshotQueue').innerHTML = '';
+  setStatus('ocrStatus', 'Reading ' + imgs.length + ' screenshot(s)...', 'warn');
+  showOcrReceipt('warn', 'OCR started. Processing screenshots...');
+  try {
+    if (!window.Tesseract) {
+      actionStep('Loading OCR engine...', 'run', 10);
+      await loadScript('https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js');
+    }
+    let allText = '';
+    for (let idx = 0; idx < imgs.length; idx++) {
+      const file = imgs[idx];
+      queueRow(file.name, 'PROCESSING', 'warntxt');
+      actionStep('OCR reading ' + (idx + 1) + '/' + imgs.length + ': ' + file.name, 'run', 15 + Math.round((idx / imgs.length) * 50));
+      let best = { text: '', score: -1, deg: 0 };
+      for (const deg of (fast ? [0, 90] : [0, 90, 270, 180])) {
+        let source;
+        try { source = await prepareImageForOCR(file, deg); } catch (e) { continue; }
+        const result = await Tesseract.recognize(source, 'eng');
+        const t = normalizeOCR(result.data.text || '');
+        const score = (allDtc(t).length * 20) + (t.match(/STFT|LTFT|Fuel|Tank|Pressure|MAP|MAF|Throttle|Voltage|B1S1|B2S1|RPM|ECT|Freeze|DTC|VIN/gi) || []).length;
+        if (score > best.score) best = { text: t, score, deg };
+        if (score >= 12) break;
+      }
+      if (best.text.trim()) {
+        allText += '\n--- OCR: ' + file.name + ' ---\n' + best.text;
+        queueRow(file.name, best.score >= 6 ? 'READ' : 'LOW CONFIDENCE', best.score >= 6 ? 'oktxt' : 'warntxt');
+      } else {
+        queueRow(file.name, 'NO TEXT', 'badtxt');
+      }
+    }
+    if (!allText.trim()) {
+      const msg = 'No readable scanner text found. Use clearer screenshot, Autel share/email report, or paste text.';
+      setStatus('ocrStatus', msg, 'bad'); showOcrReceipt('bad', msg); actionError(msg); return;
+    }
+    set('scannerText', (val('scannerText') + '\n' + allText).trim());
+    if (!$('ocrDebugBox')) {
+      const box = document.createElement('div'); box.id = 'ocrDebugBox'; box.className = 'ocrDebug';
+      const st = $('ocrStatus'); if (st && st.parentNode) st.parentNode.appendChild(box);
+    }
+    if ($('ocrDebugBox')) $('ocrDebugBox').textContent = 'OCR text read:\n\n' + allText.slice(0, 5000);
+    actionStep('OCR done. Routing to ' + (UPLOAD_MODE_LABELS[mode]||UPLOAD_MODE_LABELS.auto).label + ' parser...', 'run', 78);
+    routeByMode(val('scannerText'), mode);
+    lastPhotoOCRDone = true;
+    updateIntakeCompletion();
+    showAutoFillReceipt('Screenshot OCR');
+    const receipt = ['stft1', 'ltft1', 'mapKpa', 'ect', 'rpm', 'tpsPct', 'ftpPressure', 'o2b1s1'].filter(id => val(id)).map(id => id + '=' + val(id)).join(', ');
+    if (receipt) {
+      showOcrReceipt('ok', 'Screenshot OCR completed.\n\nValues populated: ' + receipt + '\n\nIf a value is missing, the screenshot did not show that label clearly enough.');
+      setStatus('ocrStatus', 'Screenshot OCR complete. Values Hub updated.', 'ok');
+      actionDone('Screenshot OCR completed.');
+    } else {
+      const msg = 'OCR read text, but no usable values were found. The screen may not show DTC/Live Data labels clearly.';
+      showOcrReceipt('warn', msg + '\n\nOCR preview:\n' + allText.slice(0, 1200));
+      setStatus('ocrStatus', msg, 'warn');
+      actionDone('OCR done — no values extracted.');
+    }
+  } catch (e) {
+    const msg = 'Screenshot OCR failed: ' + e.message;
+    actionError(msg); setStatus('ocrStatus', msg, 'bad'); showOcrReceipt('bad', msg);
+  } finally {
+    ocrRunning = false;
+  }
+}
+
+async function runPhotoOCR(fileArg) {
+  const file = fileArg || ($('photoUpload') && $('photoUpload').files[0]);
+  if (!file) { alert('Take or upload a scanner photo first.'); return; }
+  const preview = $('photoPreview');
+  if (preview) { try { preview.src = URL.createObjectURL(file); preview.classList.remove('hidden'); } catch (e) {} }
+  actionStart('Photo OCR in process...', 6);
+  await runScreenshotBatchOCR([file], uploadMode);
+}
+
+// ── QR ────────────────────────────────────────────────────────
+function startQRScan() {
+  const v = $('qrVideo');
+  if (!('mediaDevices' in navigator)) { $('qrStatus').textContent = 'Camera not supported. Paste QR link manually.'; return; }
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' } } }).then(stream => {
+    qrStream = stream; v.srcObject = stream; v.classList.remove('hidden');
+    $('qrStatus').textContent = 'Camera open. Point at QR code.';
+    if ('BarcodeDetector' in window) {
+      const detector = new BarcodeDetector({ formats: ['qr_code'] });
+      qrTimer = setInterval(async () => {
+        try { const codes = await detector.detect(v); if (codes && codes[0]) handleQRText(codes[0].rawValue); } catch (e) {}
+      }, 700);
+    } else { $('qrStatus').textContent = 'Camera open. BarcodeDetector not available in this browser. Paste QR link manually.'; }
+  }).catch(e => { $('qrStatus').textContent = 'Camera blocked: ' + e.message; });
+}
+
+function stopQRScan() {
+  if (qrTimer) { clearInterval(qrTimer); qrTimer = null; }
+  if (qrStream) { qrStream.getTracks().forEach(t => t.stop()); qrStream = null; }
+  $('qrVideo')?.classList.add('hidden');
+}
+
+function stripHtml(s) { const d = document.createElement('div'); d.innerHTML = s; return d.textContent || d.innerText || s; }
+
+async function handleQRText(raw) {
+  if (!raw) return;
+  stopQRScan();
+  set('qrManual', raw);
+  $('qrStatus').textContent = 'QR read. Processing...';
+  actionStart('QR import...', 10);
+  let added = '';
+  if (/^https?:\/\//i.test(raw)) {
+    try { const r = await fetch(raw); const t = await r.text(); added = stripHtml(t); }
+    catch (e) { added = raw; }
+  } else { added = raw; }
+  set('scannerText', (val('scannerText') + '\n' + added).trim());
+  const snap = safeCustomerSnap(); parseScannerText(val('scannerText')); restoreCustomer(snap);
+  updateIntakeCompletion();
+  showAutoFillReceipt('QR import');
+  $('qrStatus').textContent = 'QR data processed.';
+  actionDone('QR import completed.');
+}
+
+// ── Analysis ──────────────────────────────────────────────────
+function codesList() { return dtcs.map(d => d.code); }
+function hasCode(re) { return dtcs.some(d => re.test(d.code + ' ' + d.desc + ' ' + d.status)); }
+
+function analyzeInputs() {
+  const cand = [];
+  const add = (name, score, why, next, cust, steps) => {
+    if (score > 0) cand.push({ name, score: Math.min(100, Math.round(score)), why, next, cust, steps });
+  };
+  const p0452 = hasCode(/P0452/i), p0122 = hasCode(/P0122|P1122/i), p0106 = hasCode(/P0106/i);
+  const multi = [p0452, p0122, p0106].filter(Boolean).length;
+  add('EVAP / Fuel Tank Pressure Signal Fault',
+    (p0452 ? 48 : 0) + (val('ftpPressure') ? 18 : 0) + (val('fuelTankPct') ? 8 : 0) + (dtcs.some(d => d.code === 'P0452' && /MIL requested|Failed/i.test(d.status)) ? 20 : 0),
+    'P0452 is present and appears to be the strongest emissions-related fault in the scan.',
+    'Use scanner-only EVAP PID review: FTP pressure/voltage, fuel tank %, purge/vent command, and freeze frame. Pull OEM EVAP/FTP circuit diagram if voltage is abnormal.',
+    'The scan points strongest toward the fuel tank pressure / EVAP pressure signal area. A repair shop should verify the FTP signal and EVAP circuit before replacing parts.',
+    ['Record EVAP/FTP live data at KOEO and idle.', 'Capture freeze frame for P0452.', 'Graph FTP sensor voltage if scanner supports it.', 'Pull OEM EVAP/FTP circuit diagram.']);
+  add('Shared Sensor Reference / Signal Circuit Review Needed',
+    (multi >= 2 ? 60 : 0) + (p0122 ? 12 : 0) + (p0106 ? 12 : 0) + (p0452 ? 10 : 0),
+    'Multiple powertrain sensor-performance or low-voltage faults are present together: ' + codesList().filter(c => /P0106|P0122|P0452|P1122/.test(c)).join(', ') + '.',
+    'Use scanner live data and OEM diagrams to compare MAP, TPS, and FTP signal behavior.',
+    'The scan shows multiple sensor-related faults, so the safest next step is a circuit/data review instead of guessing at a part.',
+    ['Capture MAP voltage and TPS % sweep on scanner.', 'Capture FTP pressure/voltage data.', 'Pull OEM 5V/sensor signal diagrams.', 'Compare which fault fails this ignition vs history.']);
+  add('MAP Sensor Performance / Data Issue',
+    (p0106 ? 42 : 0) + (val('mapVolts') ? 15 : 0) + (val('mapKpa') ? 10 : 0),
+    'MAP performance code/data is present.',
+    'Graph MAP kPa/voltage on scanner at idle and 2500 RPM. Compare to baseline/OEM spec.',
+    'The MAP reading or circuit behavior should be verified with scanner data and OEM specs.',
+    ['Record MAP kPa/voltage at warm idle.', 'Record at 2500 RPM no load.', 'Compare to barometric pressure KOEO if available.']);
+  add('TPS Low Voltage / Intermittent Signal Issue',
+    (p0122 ? 50 : 0) + (val('tpsPct') ? 8 : 0),
+    'TPS low voltage/intermittent code is present.',
+    'Graph TPS %/voltage on scanner; look for dropout, flatline, or mismatch.',
+    'Throttle position data is a key suspect and should be verified with live data.',
+    ['Graph TPS signal from closed to open.', 'Compare TPS % at idle to freeze frame.', 'Pull throttle/TPS circuit info if dropout appears.']);
+  const trim1 = (num('stft1') || 0) + (num('ltft1') || 0), trim2 = (num('stft2') || 0) + (num('ltft2') || 0);
+  add('Lean Fuel Trim Pattern',
+    ((trim1 > 15 || trim2 > 15) ? 45 : 0) + (val('fuelPressure') === 'Low' ? 25 : 0),
+    'Fuel trims show high positive correction.',
+    'Capture 2500 RPM and load trim snapshots; compare fuel pressure status and MAF.',
+    'Fuel trims suggest the computer is adding fuel. More live-data snapshots are needed.',
+    ['Warm idle trim snapshot.', '2500 RPM trim snapshot.', 'MAF g/s and MAP data.']);
+  add('Rich Fuel Trim Pattern',
+    ((trim1 < -15 || trim2 < -15) ? 45 : 0),
+    'Fuel trims show high negative correction.',
+    'Review purge command, fuel pressure, MAF/MAP, and O2 behavior in scanner data.',
+    'Fuel trims suggest the computer is subtracting fuel.',
+    ['Check purge command state.', 'Review O2 upstream/downstream.', 'Compare MAF/MAP.']);
+  add('Class 2 / Module Communication Issue',
+    hasCode(/U1000|U1064|data link|Lost communications/i) ? 52 : 0,
+    'Communication codes are present in non-powertrain modules.',
+    'Separate body/audio/module communication codes from the customer complaint unless they match symptoms.',
+    'There are communication faults in the scan, but they may be secondary.',
+    ['List affected modules.', 'Check if codes are current/history.', 'Review battery/voltage data.']);
+  cand.sort((a, b) => b.score - a.score);
+  return cand[0] || {
+    name: 'Need More Scanner Data', score: 0,
+    why: 'Import a full scan report plus freeze frame/live data.',
+    next: 'Capture Full System Scan, Engine freeze frame, warm idle live data, 2500 RPM data.',
+    cust: 'More scanner data is needed before giving a strong direction.',
+    steps: ['Import full report', 'Add complaint', 'Add live data'],
+  };
+}
+
+function analyzeAll() {
+  const r = analyzeInputs();
+  lastResult = r;
+  $('primaryAnswer').textContent = r.name;
+  $('confidence').textContent = r.score + '%';
+  $('scoreBox').textContent = r.score + '%';
+  $('whyText').textContent = Array.isArray(r.why) ? r.why.join('; ') : r.why;
+  put('whyChips', [r.next, 'No under-hood work', 'Scanner-data based'].map(x => `<span class="chip">${esc(x)}</span>`).join(''));
+  $('nextBox').textContent = r.next;
+  put('stepsBox', (r.steps || []).map((s, i) => `<div class="ok"><b>Step ${i + 1}:</b> ${esc(s)}</div>`).join(''));
+  set('diagramRequest', buildDiagramRequest(r));
+  syncGuidedTab();
+  buildReport(r);
+  ready();
+  return r;
+}
+
+function buildDiagramRequest(r) {
+  const lines = ['Diagram/OEM data request for: ' + r.name, 'Vehicle: ' + [val('year'), val('make'), val('model'), val('engine')].filter(Boolean).join(' '), 'Codes: ' + codesList().join(', '), ''];
+  if (/Circuit|Reference|Sensor|MAP|TPS|FTP|EVAP/.test(r.name)) lines.push('Pull OEM diagrams for MAP/TPS/FTP sensor signal circuits, 5V reference, ground locations, connector views, PCM pinout.');
+  if (/Communication|Class 2|Module/.test(r.name)) lines.push('Pull Class 2/network communication wiring diagram, module power/ground, affected module connector views.');
+  lines.push('Scope: AutoMedic does not touch under hood, under car, or perform repair. Scanner-based direction/reporting only.');
+  return lines.join('\n');
+}
+
+function syncGuidedTab() {
+  if ($('guidedNextBox') && $('nextBox')) $('guidedNextBox').textContent = $('nextBox').textContent || 'Analyze first.';
+  if ($('guidedStepsBox') && $('stepsBox')) $('guidedStepsBox').innerHTML = $('stepsBox').innerHTML || 'Analyze first.';
+  if ($('guidedDiagramRequest') && $('diagramRequest')) $('guidedDiagramRequest').value = $('diagramRequest').value || '';
+}
+
+// ── Report ────────────────────────────────────────────────────
+function reportVal(id, fallback = '—') { const v = val(id); return v || fallback; }
+
+function reportDTCsHTML() {
+  if (!dtcs.length) return '<span class="reportPill green">No DTCs imported</span>';
+  return dtcs.map(d => `<span class="reportPill red">${esc(d.code)} — ${esc(d.desc || '')}</span>`).join('');
+}
+
+function reportLiveHTML() {
+  const items = [
+    ['STFT/LTFT B1', [val('stft1'), val('ltft1')].filter(Boolean).join(' / ')],
+    ['STFT/LTFT B2', [val('stft2'), val('ltft2')].filter(Boolean).join(' / ')],
+    ['MAP', [val('mapKpa') ? val('mapKpa') + ' kPa' : '', val('mapVolts') ? val('mapVolts') + ' V' : ''].filter(Boolean).join(' / ')],
+    ['TPS', val('tpsPct') ? val('tpsPct') + '%' : ''],
+    ['FTP', val('ftpPressure')],
+    ['O2 B1S1', val('o2b1s1')],
+    ['O2 B2S1', val('o2b2s1')],
+    ['ECT', val('ect')],
+    ['RPM', val('rpm')],
+  ].filter(x => x[1]);
+  if (!items.length) return '<span class="reportPill blue">No live data values imported yet</span>';
+  return items.map(([k, v]) => `<span class="reportPill blue">${esc(k)}: ${esc(v)}</span>`).join('');
+}
+
+function reportStepsHTML(r) {
+  const steps = (r && Array.isArray(r.steps) && r.steps.length) ? r.steps : ['Confirm current DTCs are still present.', 'Review freeze frame data for the strongest code.', 'Capture scanner live data for the suspected circuit.', 'Send report to the repair shop with recommended verification.'];
+  return '<div class="reportSteps">' + steps.map(s => `<div class="reportStep">${esc(s)}</div>`).join('') + '</div>';
+}
+
+function buildModernReport(r) {
+  const vehicle = [val('year'), val('make'), val('model'), val('engine')].filter(Boolean).join(' ') || 'Vehicle not entered';
+  const confidence = r && r.score !== undefined ? r.score + '%' : '—';
+  const html = `
+    <div class="reportHero">
+      <div><div class="reportBrand">AUTOMEDIC DIAGNOSTICS</div><div class="reportTag">We Give Answers, Not Codes. • 850-368-2285</div></div>
+      <div class="reportBadge">${esc(confidence)} CONFIDENCE</div>
+    </div>
+    <div class="reportBody">
+      <div class="reportSection blue"><h3>Customer + Vehicle</h3>
+        <div class="reportGrid">
+          <div class="reportInfo"><b>Customer</b><span>${esc(reportVal('customerName'))}</span></div>
+          <div class="reportInfo"><b>Phone</b><span>${esc(reportVal('customerPhone'))}</span></div>
+          <div class="reportInfo"><b>Work Order</b><span>${esc(reportVal('workOrder'))}</span></div>
+          <div class="reportInfo"><b>Vehicle</b><span>${esc(vehicle)}</span></div>
+          <div class="reportInfo"><b>VIN</b><span>${esc(reportVal('vin'))}</span></div>
+          <div class="reportInfo"><b>Tag / Mileage</b><span>${esc([val('plateState'), val('plate')].filter(Boolean).join(' ') || '—')} / ${esc(reportVal('mileage'))}</span></div>
+        </div>
+      </div>
+      <div class="reportSection amber"><h3>Customer Complaint</h3><div class="reportText">${esc(reportVal('complaint', 'No complaint entered.'))}</div></div>
+      <div class="reportSection red"><h3>Most Probable Direction</h3>
+        <div class="reportText"><b>${esc(r?.name || 'Need More Data')}</b></div>
+        <div class="reportText" style="margin-top:8px">${esc(Array.isArray(r?.why) ? r.why.join('; ') : (r?.why || ''))}</div>
+      </div>
+      <div class="reportSection green"><h3>Customer-Friendly Explanation</h3><div class="reportText">${esc(r?.cust || 'More scanner data needed before a final repair direction is given.')}</div></div>
+      <div class="reportSection blue"><h3>DTCs Found</h3><div class="reportPillRow">${reportDTCsHTML()}</div></div>
+      <div class="reportSection blue"><h3>Key Scanner Values</h3><div class="reportPillRow">${reportLiveHTML()}</div></div>
+      <div class="reportSection amber"><h3>Next Scanner-Based Verification</h3><div class="reportText">${esc(r?.next || 'Analyze first.')}</div></div>
+      <div class="reportSection green"><h3>Guided Steps</h3>${reportStepsHTML(r)}</div>
+      <div class="reportSection blue"><h3>Scanner / Report Info</h3>
+        <div class="reportGrid">
+          <div class="reportInfo"><b>Scan Type</b><span>Full System Scan — All Modules</span></div>
+          <div class="reportInfo"><b>Report ID</b><span>${esc(reportVal('reportId'))}</span></div>
+          <div class="reportInfo"><b>Test Time</b><span>${esc(reportVal('testTime'))}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="reportFooter">AutoMedic Diagnostics provides diagnostic direction and reporting only. No mechanical repairs, no wrenching, and no under-car work are included in this report. Final repair decisions should be verified by the repair facility using OEM service information.</div>`;
+  if ($('modernReportBox')) $('modernReportBox').innerHTML = html;
+}
+
+function buildReport(r = lastResult || analyzeInputs()) {
+  const vehicle = [val('year'), val('make'), val('model'), val('engine')].filter(Boolean).join(' ');
+  lastReport = `AUTOMEDIC DIAGNOSTICS — PINPOINT PRO REPORT\nWe Give Answers, Not Codes.\nPhone: 850-368-2285\n\nCustomer: ${val('customerName')}\nPhone: ${val('customerPhone')}\nWork Order: ${val('workOrder')}\nVehicle: ${vehicle}\nVIN: ${val('vin')}\nTag: ${[val('plateState'), val('plate')].filter(Boolean).join(' ')}\nMileage: ${val('mileage')}\nScan Type: Full System Scan — All Modules\nReport ID: ${val('reportId')}\nTest Time: ${val('testTime')}\n\nCUSTOMER COMPLAINT:\n${val('complaint')}\n\nDTCs FOUND:\n${dtcs.length ? dtcs.map(d => d.module + ' — ' + d.code + ' — ' + d.desc + ' — ' + d.status).join('\n') : 'None imported'}\n\nMOST PROBABLE DIRECTION:\n${r.name}\nConfidence: ${r.score}%\nWhy: ${Array.isArray(r.why) ? r.why.join('; ') : r.why}\n\nNEXT SCANNER-BASED VERIFICATION:\n${r.next}\n\nCUSTOMER-FRIENDLY EXPLANATION:\n${r.cust}\n\nKEY LIVE DATA:\nSTFT/LTFT B1: ${val('stft1')} / ${val('ltft1')}\nSTFT/LTFT B2: ${val('stft2')} / ${val('ltft2')}\nMAP: ${val('mapKpa')} kPa / ${val('mapVolts')} V\nTPS: ${val('tpsPct')}%\nFTP: ${val('ftpPressure')} / ${val('ftpVolts')} V\nO2: B1S1 ${val('o2b1s1')} | B2S1 ${val('o2b2s1')}\n\nMISSING ITEMS:\n${missingItems().join('\n') || 'None for first-pass analysis'}\n\nSCOPE:\nAutoMedic Diagnostics provides diagnostic testing, scanner data review, and reporting only. No under-hood work. No under-car work. No wrenching. No mechanical repairs.`;
+  $('reportBox').textContent = lastReport;
+  buildModernReport(r);
+  return lastReport;
+}
+
+function copyReport() { buildReport(); navigator.clipboard?.writeText(lastReport).then(() => alert('Report copied.')).catch(() => alert('Copy blocked. Select manually.')); }
+function downloadReport() {
+  buildReport();
+  const blob = new Blob([lastReport], { type: 'text/plain' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'AutoMedic_Report_' + (val('vin') || Date.now()) + '.txt'; a.click(); URL.revokeObjectURL(a.href);
+}
+function printModernReport() { if (!lastReport) buildReport(); window.print(); }
+
+// ── Fuel trims ────────────────────────────────────────────────
+function quickTrim() {
+  const t1 = (num('stft1') || 0) + (num('ltft1') || 0), t2 = (num('stft2') || 0) + (num('ltft2') || 0);
+  let cls = 'ok', msg = 'Fuel trims normal / not enough data.';
+  if (t1 > 15 || t2 > 15) { cls = 'bad'; msg = 'Lean correction — capture 2500 RPM data.'; }
+  else if (t1 < -15 || t2 < -15) { cls = 'bad'; msg = 'Rich correction — review purge/MAF/fuel.'; }
+  else if (Math.abs(t1) > 8 || Math.abs(t2) > 8) { cls = 'warn'; msg = 'Borderline trim — capture warm idle and 2500 RPM.'; }
+  $('trimPattern').className = cls;
+  $('trimPattern').textContent = msg + ` Total B1: ${Math.round(t1 * 10) / 10}%, B2: ${Math.round(t2 * 10) / 10}%`;
+}
+
+function trimTotal(a, b) { const x = num(a), y = num(b); return x === null && y === null ? null : (x || 0) + (y || 0); }
+
+function visualTrimSync() {
+  const idle1 = trimTotal('idleStft1', 'idleLtft1'), idle2 = trimTotal('idleStft2', 'idleLtft2');
+  const rpm1 = trimTotal('rpmStft1', 'rpmLtft1'), rpm2 = trimTotal('rpmStft2', 'rpmLtft2');
+  const load1 = trimTotal('loadStft1', 'loadLtft1'), load2 = trimTotal('loadStft2', 'loadLtft2');
+  let msg = 'Enter trims at warm idle first, then 2500 RPM, then symptom/load if available.', cls = 'good';
+  const improves = (idle1 !== null && rpm1 !== null && idle1 > 15 && Math.abs(rpm1) <= 10) || (idle2 !== null && rpm2 !== null && idle2 > 15 && Math.abs(rpm2) <= 10);
+  const bothLean = idle1 !== null && idle2 !== null && idle1 > 15 && idle2 > 15;
+  const oneLean = (idle1 !== null && idle1 > 15 && (idle2 === null || Math.abs(idle2) <= 10)) || (idle2 !== null && idle2 > 15 && (idle1 === null || Math.abs(idle1) <= 10));
+  const rich = [idle1, idle2, load1, load2].some(v => v !== null && v < -15);
+  if (improves) { msg = 'Pattern: worse at idle but improves at 2500 RPM. Usually unmetered air/vacuum-leak behavior.'; cls = 'badx'; }
+  else if (bothLean) { msg = 'Pattern: both banks lean at idle. If stays lean under load, think fuel delivery/MAF. If improves, think unmetered air.'; cls = 'badx'; }
+  else if (oneLean) { msg = 'Pattern: one bank lean, other near normal. Think bank-specific issue or O2 skew.'; cls = 'warnx'; }
+  else if (rich) { msg = 'Pattern: rich trims. Review purge, MAF/MAP, fuel pressure, O2 behavior.'; cls = 'badx'; }
+  else if ([idle1, idle2, rpm1, rpm2, load1, load2].some(v => v !== null && Math.abs(v) > 10)) { msg = 'Pattern: borderline. More snapshots needed.'; cls = 'warnx'; }
+  else if (idle1 !== null || idle2 !== null) { msg = 'Pattern: trims look close to normal from what is entered.'; cls = 'good'; }
+  $('visualTrimResult').className = 'trimResult ' + cls;
+  $('visualTrimResult').innerHTML = `<b>Idle B1/B2:</b> ${idle1 ?? '—'}% / ${idle2 ?? '—'}% &nbsp; <b>2500:</b> ${rpm1 ?? '—'}% / ${rpm2 ?? '—'}% &nbsp; <b>Load:</b> ${load1 ?? '—'}% / ${load2 ?? '—'}%<br>${esc(msg)}`;
+}
+
+function sendVisualTrimToMain() {
+  [['stft1', 'idleStft1'], ['ltft1', 'idleLtft1'], ['stft2', 'idleStft2'], ['ltft2', 'idleLtft2']].forEach(([d, s]) => { if (val(s)) set(d, val(s)); });
+  quickTrim(); visualTrimSync(); ready();
+  alert('Warm idle fuel trims copied to main live-data boxes.');
+}
+
+function clearVisualTrims() {
+  ['idleStft1', 'idleLtft1', 'idleStft2', 'idleLtft2', 'rpmStft1', 'rpmLtft1', 'rpmStft2', 'rpmLtft2', 'loadStft1', 'loadLtft1', 'loadStft2', 'loadLtft2'].forEach(id => set(id, ''));
+  visualTrimSync();
+}
+
+// ── AI Assist ─────────────────────────────────────────────────
+function currentDiagContext() {
+  const r = lastResult || analyzeInputs();
+  const liveIds = ['stft1', 'ltft1', 'stft2', 'ltft2', 'maf', 'mapKpa', 'mapVolts', 'ect', 'rpm', 'tpsPct', 'ftpPressure', 'ftpVolts', 'o2b1s1', 'o2b2s1'];
+  return { vehicle: [val('year'), val('make'), val('model'), val('engine')].filter(Boolean).join(' ') || 'Unknown', vin: val('vin'), complaint: val('complaint'), dtcs: (dtcs || []).map(d => [d.code, d.desc, d.status, d.module].filter(Boolean).join(' | ')).join('\n'), modules: (modules || []).map(m => m.name + ' (' + (m.count || 0) + ')').join(', '), values: liveIds.filter(id => val(id)).map(id => id + '=' + val(id)).join(', '), primary: r?.name || '', confidence: r?.score || 0, why: r?.why || '', next: r?.next || '' };
+}
+
+function addAIMessage(role, text) {
+  const win = $('aiChatWindow'); if (!win) return;
+  const div = document.createElement('div'); div.className = 'aiMsg ' + role; div.textContent = text;
+  win.appendChild(div); win.scrollTop = win.scrollHeight;
+}
+function clearAIChat() { aiChatHistory = []; if ($('aiChatWindow')) $('aiChatWindow').innerHTML = '<div class="aiMsg system">AI Assist cleared.</div>'; if ($('aiQuestion')) $('aiQuestion').value = ''; }
+
+function localAIAnswer(question) {
+  const ctx = currentDiagContext();
+  const q = String(question || '').toLowerCase();
+  const lines = ['AutoMedic AI Assist — V42', ''];
+  if (ctx.vehicle || ctx.vin) lines.push('Vehicle: ' + ctx.vehicle + (ctx.vin ? ' | VIN: ' + ctx.vin : ''));
+  if (ctx.complaint) lines.push('Complaint: ' + ctx.complaint);
+  if (ctx.dtcs) lines.push('Codes:\n' + ctx.dtcs);
+  lines.push('');
+  if (ctx.primary) {
+    lines.push('Most likely direction: ' + ctx.primary + (ctx.confidence ? ' (' + ctx.confidence + '% confidence)' : ''));
+    if (ctx.why) lines.push('Why: ' + (Array.isArray(ctx.why) ? ctx.why.join('; ') : ctx.why));
+    if (ctx.next) lines.push('Best next scanner verification: ' + ctx.next);
+  }
+  const codes = (dtcs || []).map(d => d.code);
+  const has = re => codes.some(c => re.test(c));
+  const t1 = (num('stft1') || 0) + (num('ltft1') || 0), t2 = (num('stft2') || 0) + (num('ltft2') || 0);
+  if (q.includes('fuel') || q.includes('trim') || q.includes('lean') || q.includes('rich')) {
+    lines.push('', 'Fuel trim read:', 'Bank 1 total: ' + (isNaN(t1) ? 'missing' : t1 + '%'), 'Bank 2 total: ' + (isNaN(t2) ? 'missing' : t2 + '%'));
+    if (Math.abs(t1) <= 10 && Math.abs(t2) <= 10) lines.push('Pattern: close to normal at the snapshot entered.');
+    if (t1 > 15 || t2 > 15) lines.push('Pattern: positive trims point lean. Next: MAF g/s, MAP kPa/volts, O2 activity, fuel pressure, freeze frame load/RPM.');
+    if (t1 < -15 || t2 < -15) lines.push('Pattern: negative trims point rich. Next: purge command, O2 rich condition, MAF/MAP plausibility.');
+    if (!val('stft1') && !val('ltft1')) lines.push('Need more data: enter warm idle STFT/LTFT for both banks, then 2500 RPM snapshot.');
+  }
+  if (has(/P0106|P0122|P0452|P1122/)) {
+    lines.push('', 'Pattern from P0106 / P0122 / P0452 / P1122 group:', 'Those codes point toward sensor signal/voltage plausibility. Focus: MAP voltage/kPa, TPS %, FTP pressure/voltage, 5V reference symptoms, freeze frame, whether codes are current/failed this ignition.', 'Do not replace every sensor. Verify shared reference/ground through scan data and approved circuit checks.');
+  }
+  if (q.includes('customer') || q.includes('explain') || q.includes('wording')) {
+    lines.push('', 'Customer wording:', 'The scan shows a sensor signal problem in the engine/EVAP data area. The vehicle computer is seeing readings that do not match its expectations. The next step is for a repair shop to verify the related sensor circuit and live data before replacing parts.');
+  }
+  if (q.includes('next') || q.includes('verify') || q.includes('test')) {
+    lines.push('', 'Next verification steps:', '1. Confirm codes are Current vs History.', '2. Open freeze frame for the strongest code.', '3. Capture live data: MAP kPa/volts, TPS %, FTP pressure/volts, STFT/LTFT, O2 B1S1/B2S1, ECT, RPM, battery voltage.', '4. Compare live values at key-on, warm idle, and light throttle.', '5. Re-run analysis after those values are in the Values Hub.');
+  }
+  if (!ctx.dtcs && !ctx.values) lines.push('', 'I need scanner data for a strong answer. Upload DTC screen, freeze frame, or live data screenshots, or paste the Autel report text.');
+  lines.push('', 'Scope: AutoMedic gives diagnostic direction only — no repairs, no wrenching.');
+  return lines.join('\n');
+}
+
+async function askAIAssist(presetQuestion) {
+  const q = presetQuestion || val('aiQuestion');
+  if (!q.trim()) { alert('Type a question first.'); return; }
+  addAIMessage('user', q);
+  if ($('aiQuestion')) $('aiQuestion').value = '';
+  aiChatHistory.push({ role: 'user', content: q });
+  actionStart('AI Assist answering...', 10);
+  actionStep('Reading vehicle, DTCs, values, and analysis...', 'run', 30);
+  const answer = localAIAnswer(q);
+  aiChatHistory.push({ role: 'assistant', content: answer });
+  addAIMessage('bot', answer);
+  actionDone('AI Assist answer ready.');
+}
+
+function buildAIOutput() {
+  const r = lastResult || analyzeAll();
+  $('aiDirection').textContent = r.name + '\nConfidence: ' + r.score + '%';
+  $('aiWhy').textContent = Array.isArray(r.why) ? r.why.join('; ') : r.why;
+  $('aiNext').textContent = r.next;
+  $('aiCustomer').textContent = (r.cust || '') + '\n\nRecommended next step: have a repair shop verify this direction with the listed scanner/OEM verification steps before replacing parts. AutoMedic Diagnostics provides diagnostic testing and reporting only.';
+  const prompt = `Act as an expert automotive diagnostic workflow assistant for AutoMedic Diagnostics.\n\nRules: diagnostic-only, no under-hood work, no under-car work, no wrenching, no repairs.\n\nVehicle: ${[val('year'), val('make'), val('model'), val('engine')].filter(Boolean).join(' ')}\nVIN: ${val('vin')}\nComplaint: ${val('complaint')}\nDTCs:\n${dtcs.map(d => d.module + ' | ' + d.code + ' | ' + d.desc + ' | ' + d.status).join('\n') || 'None'}\n\nLive Data:\n${['stft1', 'ltft1', 'stft2', 'ltft2', 'maf', 'mapKpa', 'mapVolts', 'ect', 'tpsPct', 'ftpPressure'].filter(id => val(id)).map(id => id + '=' + val(id)).join(', ')}\n\nAnalysis: ${r.name}, ${r.score}% confidence.\nMissing: ${missingItems().join(', ') || 'None'}.`;
+  set('aiPromptBox', prompt);
+  lastAI = [r.name, r.why, r.next, r.cust].join('\n\n');
+  return lastAI;
+}
+
+function copyAIPrompt() { buildAIOutput(); navigator.clipboard?.writeText(val('aiPromptBox')).then(() => alert('AI prompt copied.')).catch(() => alert('Copy blocked.')); }
+function sendAIToReport() { buildAIOutput(); set('diagramRequest', (val('diagramRequest') ? val('diagramRequest') + '\n\n' : '') + 'AI ASSIST NOTES\n' + lastAI); buildReport(); alert('AI Assist notes added to report.'); }
+
+// ── Draft / auto-save ─────────────────────────────────────────
+function formData() {
+  const data = {};
+  qsa('input,select,textarea').forEach(e => { if (e.type !== 'file') data[e.id] = e.value; });
+  return data;
+}
+
+function autoSaveDraft() {
+  if (restoringDraft) return;
+  try {
+    const data = formData();
+    data._dtcs = dtcs; data._modules = modules;
+    data._savedAt = new Date().toISOString();
+    data._edited = [...userEdited];
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(data));
+    const st = $('autoSaveStatus');
+    if (st) st.textContent = 'Auto-saved: ' + new Date().toLocaleTimeString();
+  } catch (e) {}
+}
+
+function restoreDraft() {
+  try {
+    const raw = localStorage.getItem(DRAFT_KEY); if (!raw) return;
+    const data = JSON.parse(raw);
+    restoringDraft = true;
+    Object.entries(data).forEach(([k, v]) => {
+      if (k.startsWith('_')) return;
+      if ($(k) && v !== undefined && v !== null) $(k).value = String(v).slice(0, 12000);
+    });
+    dtcs = Array.isArray(data._dtcs) ? data._dtcs : [];
+    modules = Array.isArray(data._modules) ? data._modules : [];
+    (data._edited || []).forEach(id => userEdited.add(id));
+    restoringDraft = false;
+    if (dtcs.length) renderDTCTable();
+    if (modules.length) {
+      if ($('moduleCount')) $('moduleCount').textContent = modules.length;
+      put('moduleTable', modules.length ? modules.map(m => `<tr><td>${esc(m.name)}</td><td>${m.count}</td></tr>`).join('') : '<tr><td colspan="2">No modules.</td></tr>');
+    }
+    const st = $('autoSaveStatus');
+    if (st && data._savedAt) st.textContent = 'Restored draft from ' + new Date(data._savedAt).toLocaleString();
+  } catch (e) { restoringDraft = false; }
+}
+
+// ── Job History ───────────────────────────────────────────────
+function loadJobs() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(JOBS_KEY) || '[]');
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (e) { return []; }
+}
+function saveJobs(jobs) {
+  try { localStorage.setItem(JOBS_KEY, JSON.stringify(jobs)); return true; }
+  catch (e) { alert('Could not save job history (storage full or blocked). Export your history, then clear old jobs.'); return false; }
+}
+function saveJob() {
+  const jobs = loadJobs();
+  const job = { id: Date.now(), date: new Date().toLocaleString(), vin: val('vin'), vehicle: [val('year'), val('make'), val('model')].filter(Boolean).join(' '), customer: val('customerName'), result: (lastResult || analyzeInputs()).name, data: formData(), dtcs };
+  jobs.unshift(job);
+  if (!saveJobs(jobs.slice(0, 80))) return;
+  renderHistory();
+  alert('Job saved.');
+}
+
+function renderHistory() {
+  const jobs = loadJobs();
+  put('historyList', jobs.length ? jobs.map(j => `<div class="lastVinBox"><div><b>${esc(j.vehicle || 'Vehicle')}</b><div class="mini">${esc(j.customer || '')} • ${esc(j.vin || '')} • ${esc(j.date || '')} • ${esc(j.result || '')}</div></div><div class="btns" style="margin:0"><button class="btn blue" data-act="load" data-id="${j.id}">Load</button><button class="btn red" data-act="del" data-id="${j.id}">Delete</button></div></div>`).join('') : '<div class="mini">No saved jobs yet.</div>');
+  const list = $('historyList');
+  if (list) list.onclick = function (e) {
+    const btn = e.target.closest('button[data-act]'); if (!btn) return;
+    const id = Number(btn.dataset.id);
+    if (btn.dataset.act === 'load') loadJob(id);
+    else if (btn.dataset.act === 'del') deleteJob(id);
+  };
+}
+
+function loadJob(id) {
+  const jobs = loadJobs();
+  const job = jobs.find(j => j.id === id);
+  if (job) {
+    const snap = safeCustomerSnap();
+    restoringDraft = true;
+    Object.entries(job.data || {}).forEach(([k, v]) => { if ($(k)) set(k, String(v).slice(0, 12000)); });
+    restoringDraft = false;
+    restoreCustomer(snap);
+    dtcs = job.dtcs || []; renderDTCTable();
+    ready(); updateIntakeCompletion(); analyzeAll();
+    showTab('customer');
+  }
+}
+
+function deleteJob(id) {
+  let jobs = loadJobs();
+  jobs = jobs.filter(j => j.id !== id);
+  saveJobs(jobs);
+  renderHistory();
+}
+function clearHistory() { if (confirm('Clear all job history?')) { localStorage.removeItem(JOBS_KEY); renderHistory(); } }
+function exportHistory() {
+  const blob = new Blob([localStorage.getItem(JOBS_KEY) || '[]'], { type: 'application/json' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'automedic_history_v42.json'; a.click(); URL.revokeObjectURL(a.href);
+}
+function importHistory() {
+  const inp = document.createElement('input');
+  inp.type = 'file'; inp.accept = '.json,application/json';
+  inp.onchange = function () {
+    const f = inp.files && inp.files[0]; if (!f) return;
+    const rd = new FileReader();
+    rd.onload = function () {
+      try {
+        const parsed = JSON.parse(String(rd.result));
+        if (!Array.isArray(parsed)) { alert('Invalid history file: expected an exported job list.'); return; }
+        if (!saveJobs(parsed.slice(0, 80))) return;
+        renderHistory();
+        alert('Imported ' + parsed.length + ' job(s).');
+      } catch (e) { alert('Invalid JSON file.'); }
+    };
+    rd.readAsText(f);
+  };
+  inp.click();
+}
+
+// ── Sample report ─────────────────────────────────────────────
+function loadSampleReport() {
+  const sample = `Shop Name: --\nTel: --\nEmail: --\nAddress: --\n2002 GM Vehicle Diagnostic Report\nVehicle Information\n2002/GM/Cadillac/ Odometer Reading: 165621miles\nVIN: 1G6KF57952U000000 License Plate: SAMPLE1\nCustomer Information\nName: Sample Customer Tel: 8505550123\nDevice Information\nScanner: MaxiCOM MK900-BT Version: V17.00 Repair Order Number:\nSerial Number: VB2GSAMPLE01\nReport ID: MAXIA20260101000000\nTest Time: 2026-05-10 05:08:57\nSystem Scanned ( 22 )\nSystem Status/DTC\nPowertrain 4\nDRP/ABS/TCS/VSES 0\nInstrument panel module 5\nRear climate control panel 1\nAmplifier (Bose) 2\nMemory seat module 2\nOnStar 1\nDTC ( 15 )\nPowertrain ( 4 DTCs )\nDTC Description Status\nP0106 Manifold Absolute Pressure (MAP) sensor performance\nCurrent DTC\nLast test: Not ran\nHistory\nP0122 Throttle Position Sensor (TPS) circuit low voltage\nCurrent DTC\nHistory\nP0452 Fuel Tank Pressure (FTP) sensor performance\nCurrent DTC\nLast test: Failed\nThis ignition: Failed\nMIL requested\nHistory\nP1122 Throttle Position Sensor (TPS) circuit intermittent low voltage\nCurrent DTC\nHistory\nAmplifier (Bose) ( 2 DTCs )\nU1000 Class 2 data link malfunction Current DTC\nU1064 Lost communications with BCM/Dash Integration Module History DTC\nTechnician No`;
+  set('scannerText', sample);
+  setStatus('intakeStatus', 'Sample MK900BT report loaded. Tap Import + Auto-Fill.', 'ok');
+}
+
+// ── Init ──────────────────────────────────────────────────────
+function init() {
+  // Restore auto-saved draft
+  restoreDraft();
+
+  // Attach file upload handler exactly once
+  const fu = $('fileUpload');
+  if (fu) fu.onchange = handleFileUpload;
+
+  // Photo upload
+  const pu = $('photoUpload');
+  if (pu) pu.onchange = e => { const f = e.target.files[0]; if (f) runPhotoOCR(f); };
+
+  // Scanner text box: mark user edits + auto-fill on paste
+  const st = $('scannerText');
+  if (st) {
+    st.addEventListener('input', () => { markUserEdit(st); autoSaveDraft(); updateIntakeCompletion(); });
+    st.addEventListener('paste', () => {
+      setTimeout(() => {
+        const snap = safeCustomerSnap(); parseScannerText(val('scannerText')); restoreCustomer(snap);
+        updateIntakeCompletion(); showAutoFillReceipt('Paste');
+      }, 100);
+    });
+  }
+
+  // All user-editable inputs: mark + autosave
+  qsa('input:not([type=file]),select,textarea').forEach(el => {
+    el.addEventListener('input', () => { markUserEdit(el); autoSaveDraft(); });
+    el.addEventListener('change', () => { markUserEdit(el); autoSaveDraft(); });
+  });
+
+  // QR manual field
+  const qm = $('qrManual');
+  if (qm) qm.addEventListener('change', () => handleQRText(qm.value));
+
+  // Set default upload mode UI state
+  setUploadMode('live', $('modeBtn_live'));
+  renderHistory();
+  renderLastVin();
+  updateVehicleViews();
+  ready();
+  visualTrimSync();
+  updateIntakeCompletion();
+  autoSaveDraft();
+}
+
+// Run init when DOM is ready
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+else init();
+</script>
+</body>
+</html>
