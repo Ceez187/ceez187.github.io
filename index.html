@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AutoMedic Diagnostics | Mobile Vehicle Diagnostics | Northwest Florida</title>
+<meta name="description" content="Professional mobile vehicle diagnostics serving Okaloosa, Walton, Santa Rosa, and Escambia counties. Full system scans, live data analysis, plain-English answers. We give answers, not codes. Call 850-368-2285.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "AutoMedic Diagnostics",
+  "description": "Mobile vehicle diagnostics service. Full system scans, live data analysis, and diagnostic reports. Diagnostics only — no repairs.",
+  "slogan": "We Give Answers, Not Codes.",
+  "telephone": "+1-850-368-2285",
+  "email": "automedicdiagnostics@gmail.com",
+  "url": "https://automedicdiagnostics.com",
+  "sameAs": ["https://fb.com/AutoMedicDiagnostics"],
+  "areaServed": [
+    {"@type": "AdministrativeArea", "name": "Okaloosa County, FL"},
+    {"@type": "AdministrativeArea", "name": "Walton County, FL"},
+    {"@type": "AdministrativeArea", "name": "Santa Rosa County, FL"},
+    {"@type": "AdministrativeArea", "name": "Escambia County, FL"}
+  ],
+  "priceRange": "$$"
+}
+</script>
+<style>
+:root{
+  --ink:#04060c; --panel:#0d1420; --line:rgba(255,255,255,.12);
+  --red:#ff1238; --cyan:#00c8ff; --green:#17e889;
+  --bone:#eef3f8; --muted:#8fa0b5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--bone);font-family:Inter,Arial,sans-serif;line-height:1.55;-webkit-text-size-adjust:100%}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 15% -5%,rgba(255,18,56,.22),transparent 36%),radial-gradient(circle at 88% 0%,rgba(0,200,255,.16),transparent 38%),linear-gradient(180deg,#081120 0%,#04060c 55%,#000 100%)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,.05) 70%)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.disp{font-family:"Barlow Condensed",Inter,sans-serif;letter-spacing:.01em;line-height:1.04;margin:0}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+a{color:var(--cyan)}
+.btn{display:inline-block;padding:15px 26px;border-radius:14px;font-weight:800;font-size:16px;text-decoration:none;border:1px solid transparent;text-align:center}
+.btn.red{background:linear-gradient(135deg,var(--red),#8b0018);color:#fff;border-color:rgba(255,18,56,.55);box-shadow:0 10px 30px rgba(255,18,56,.25)}
+.btn.ghost{background:rgba(255,255,255,.06);color:var(--bone);border-color:var(--line)}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(4,6,12,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navIn{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 20px;max-width:1100px;margin:0 auto}
+.brand{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:23px;color:#fff;text-decoration:none;letter-spacing:.02em}
+.brand b{color:var(--red)}
+.navCall{font-weight:800;font-size:15px;color:#fff;text-decoration:none;padding:10px 18px;border-radius:12px;background:linear-gradient(135deg,var(--red),#8b0018);white-space:nowrap}
+
+/* hero */
+.hero{padding:64px 0 56px}
+.heroGrid{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(44px,7vw,76px);font-weight:800;text-transform:uppercase}
+.hero h1 .ansW{color:var(--green)}
+.hero h1 .not{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:4px}
+.lede{font-size:18px;color:var(--muted);margin:18px 0 26px;max-width:46ch}
+.lede b{color:var(--bone)}
+.heroBtns{display:flex;gap:12px;flex-wrap:wrap}
+.scope{margin-top:22px;font-size:13px;color:var(--muted);border-left:3px solid var(--red);padding-left:12px}
+
+/* signature: scan readout */
+.readout{border:1px solid rgba(0,200,255,.3);border-radius:20px;background:linear-gradient(180deg,rgba(13,20,32,.97),rgba(4,7,14,.99));box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 34px rgba(0,200,255,.07);overflow:hidden}
+.readHead{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.readHead .live{color:var(--green)}
+.readHead .live:before{content:"";display:inline-block;width:8px;height:8px;border-radius:99px;background:var(--green);margin-right:7px;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@media (prefers-reduced-motion: reduce){.readHead .live:before{animation:none}}
+.readRow{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.06);align-items:center}
+.readRow:last-child{border-bottom:0}
+.dtc{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:15px;color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(255,18,56,.8)}
+.ansT{font-size:14px;color:var(--bone)}
+.ansT b{color:var(--green)}
+
+/* trust strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.03)}
+.stripIn{display:flex;gap:10px 34px;flex-wrap:wrap;justify-content:center;padding:16px 20px;font-size:13px;font-weight:600;color:var(--muted)}
+.stripIn span:before{content:"✓";color:var(--green);margin-right:8px;font-weight:800}
+
+/* sections */
+section{padding:64px 0}
+.secHead{margin-bottom:34px;max-width:60ch}
+.secHead h2{font-size:clamp(30px,4.5vw,44px);text-transform:uppercase}
+.secHead p{color:var(--muted);margin:10px 0 0}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{border:1px solid var(--line);border-radius:18px;padding:22px;background:linear-gradient(180deg,rgba(13,20,32,.9),rgba(4,7,14,.95))}
+.step .n{font-family:"JetBrains Mono",monospace;color:var(--red);font-weight:700;font-size:13px;letter-spacing:.15em}
+.step h3{font-size:23px;margin:10px 0 8px;text-transform:uppercase}
+.step p{color:var(--muted);font-size:14px;margin:0}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svcCard{border:1px solid var(--line);border-radius:18px;padding:22px;background:rgba(255,255,255,.035)}
+.svcCard.hot{border-color:rgba(0,200,255,.4);background:linear-gradient(135deg,rgba(0,200,255,.08),rgba(255,18,56,.05),rgba(13,20,32,.9))}
+.svcCard h3{font-size:22px;text-transform:uppercase;margin-bottom:8px}
+.svcCard p{color:var(--muted);font-size:14px;margin:0 0 12px}
+.svcCard ul{margin:0;padding-left:18px;color:var(--muted);font-size:13.5px}
+.svcCard li{margin:5px 0}
+
+/* symptoms */
+.symGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sym{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:rgba(255,255,255,.03);font-size:14.5px}
+.sym .dot{flex:none;width:10px;height:10px;border-radius:99px;background:var(--red);margin-top:6px;box-shadow:0 0 12px rgba(255,18,56,.7)}
+
+/* military */
+.mil{border:1px solid rgba(23,232,137,.35);border-radius:20px;padding:30px;background:linear-gradient(135deg,rgba(23,232,137,.09),rgba(13,20,32,.95));display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
+.mil h2{font-size:clamp(26px,4vw,36px);text-transform:uppercase}
+.mil p{color:var(--muted);margin:8px 0 0;max-width:54ch}
+
+/* area */
+.areaGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.county{border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;background:rgba(255,255,255,.03)}
+.county b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:21px;text-transform:uppercase}
+.county span{font-size:12.5px;color:var(--muted)}
+.areaNote{margin-top:14px;color:var(--muted);font-size:13.5px}
+
+/* cta */
+.cta{border-radius:24px;border:1px solid rgba(255,18,56,.4);background:linear-gradient(135deg,rgba(255,18,56,.14),rgba(4,7,14,.96));padding:46px 30px;text-align:center}
+.cta h2{font-size:clamp(32px,5vw,52px);text-transform:uppercase}
+.cta p{color:var(--muted);margin:12px auto 24px;max-width:52ch}
+.phoneBig{font-family:"Barlow Condensed",sans-serif;font-size:clamp(30px,5vw,44px);font-weight:800;color:#fff;text-decoration:none;display:inline-block;margin-bottom:18px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:13.5px}
+.footGrid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:flex-start}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--cyan)}
+.footScope{margin-top:16px;font-size:12.5px;max-width:78ch}
+
+@media(max-width:880px){
+  .heroGrid{grid-template-columns:1fr}
+  .steps,.svc{grid-template-columns:1fr}
+  .symGrid{grid-template-columns:1fr}
+  .areaGrid{grid-template-columns:1fr 1fr}
+  section{padding:48px 0}
+  .hero{padding:44px 0 40px}
+}
+a:focus-visible,.btn:focus-visible,.navCall:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:14px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navIn">
+    <a class="brand" href="#top">AUTO<b>MEDIC</b> DIAGNOSTICS</a>
+    <a class="navCall" href="tel:8503682285">Call 850-368-2285</a>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="heroGrid">
+    <div>
+      <div class="eyebrow">Mobile Vehicle Diagnostics · Northwest Florida</div>
+      <h1>We Give <span class="ansW">Answers</span>,<br>Not <span class="not">Codes</span>.</h1>
+      <p class="lede">A check-engine light is a question. A code reader gives you a number. <b>AutoMedic comes to you</b>, runs a professional full system scan across every module in your vehicle, analyzes the live data, and hands you a plain-English report on what's actually wrong — before you spend a dime at a shop.</p>
+      <div class="heroBtns">
+        <a class="btn red" href="tel:8503682285">Book a Scan — 850-368-2285</a>
+        <a class="btn ghost" href="#how">How It Works</a>
+      </div>
+      <p class="scope">Diagnostics only. We don't sell repairs, so our answer is never a sales pitch.</p>
+    </div>
+    <div class="readout" aria-label="Example: trouble codes translated into plain-English answers">
+      <div class="readHead"><span>All-Module Scan · 22 Systems</span><span class="live">Live</span></div>
+      <div class="readRow"><span class="dtc">P0171</span><span class="ansT"><b>Answer:</b> Engine running lean — vacuum leak at the intake, not a bad oxygen sensor.</span></div>
+      <div class="readRow"><span class="dtc">P0300</span><span class="ansT"><b>Answer:</b> Random misfire traced to one weak coil under load — not all eight.</span></div>
+      <div class="readRow"><span class="dtc">U1000</span><span class="ansT"><b>Answer:</b> Modules losing communication — one corroded ground, not a new computer.</span></div>
+      <div class="readRow"><span class="dtc">P0455</span><span class="ansT"><b>Answer:</b> Large EVAP leak — loose gas cap seal. Verified before anyone replaces a part.</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="stripIn wrap">
+    <span>We come to you</span>
+    <span>Full system scan — every module</span>
+    <span>Plain-English written report</span>
+    <span>No repairs, no upsells</span>
+    <span>Military &amp; first responder discount</span>
+  </div>
+</div>
+
+<section id="how" class="wrap">
+  <div class="secHead">
+    <div class="eyebrow">The Process</div>
+    <h2>From Warning Light to Real Answer</h2>
+    <p>Most shops charge a diagnostic fee, then make money on the repair they recommend. We only do the diagnosis — so the answer you get is the answer your vehicle gives.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="n mono">STEP 01</span><h3>We Come to You</h3><p>Home, work, base, or roadside — anywhere in our four-county service area. No tow truck, no waiting room, no leaving your vehicle for days.</p></div>
+    <div class="step"><span class="n mono">STEP 02</span><h3>Full System Scan</h3><p>A professional all-module scan of your entire vehicle — engine, transmission, ABS, airbags, body modules, and more — plus live data analysis while it runs.</p></div>
+    <div class="step"><span class="n mono">STEP 03</span><h3>Plain-English Report</h3><p>You get a written report: what's wrong, what's urgent, what can wait, and exactly what to tell a repair shop so you're never sold parts you don't need.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="secHead">
+    <div class="eyebrow">Services</div>
+    <h2>What We Diagnose</h2>
+  </div>
+  <div class="svc">
+    <div class="svcCard"><h3>Check-Engine &amp; Warning Lights</h3><p>The light is on — but why?</p>
+      <ul><li>Full system scan, all modules</li><li>Live data and freeze frame analysis</li><li>Root cause, not just the code</li><li>Written report you can hand to any shop</li></ul>
+    </div>
+    <div class="svcCard hot"><h3>Pre-Purchase Inspection Scans</h3><p>Buying used? Know before you sign.</p>
+      <ul><li>Hidden and history trouble codes</li><li>Recall and complaint history by VIN</li><li>Signs of cleared codes or masked problems</li><li>Walk away or negotiate with proof</li></ul>
+    </div>
+    <div class="svcCard"><h3>Fleet &amp; Drivability</h3><p>For businesses and stubborn problems.</p>
+      <ul><li>On-site fleet vehicle scanning</li><li>Intermittent issue investigation</li><li>Second opinions on shop quotes</li><li>Recurring service scheduling available</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="secHead">
+    <div class="eyebrow">Symptoms</div>
+    <h2>Sound Familiar? Scan It Before You Spend.</h2>
+  </div>
+  <div class="symGrid">
+    <div class="sym"><span class="dot"></span><span>Check-engine light on, flashing, or coming and going</span></div>
+    <div class="sym"><span class="dot"></span><span>Rough idle, hesitation, stalling, or hard starts</span></div>
+    <div class="sym"><span class="dot"></span><span>Sudden drop in fuel economy or power</span></div>
+    <div class="sym"><span class="dot"></span><span>ABS, airbag, or traction control warnings</span></div>
+    <div class="sym"><span class="dot"></span><span>Shop quoted a big repair and you want a second opinion</span></div>
+    <div class="sym"><span class="dot"></span><span>Failed emissions or a problem nobody can find</span></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="mil">
+    <div>
+      <div class="eyebrow">Eglin · Hurlburt · NAS Pensacola · Whiting Field</div>
+      <h2>Military &amp; First Responder Discount</h2>
+      <p>Northwest Florida runs on the people who serve it. Active duty, veterans, law enforcement, fire, and EMS — mention your service when you book.</p>
+    </div>
+    <a class="btn red" href="tel:8503682285">Book With Discount</a>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="secHead">
+    <div class="eyebrow">Coverage</div>
+    <h2>Serving the Emerald Coast</h2>
+  </div>
+  <div class="areaGrid">
+    <div class="county"><b>Okaloosa</b><span>Fort Walton Beach · Destin · Niceville · Crestview · Shalimar</span></div>
+    <div class="county"><b>Walton</b><span>Santa Rosa Beach · 30A · DeFuniak Springs · Freeport</span></div>
+    <div class="county"><b>Santa Rosa</b><span>Navarre · Gulf Breeze · Milton · Pace</span></div>
+    <div class="county"><b>Escambia</b><span>Pensacola · Perdido Key · Cantonment</span></div>
+  </div>
+  <p class="areaNote">Don't see your town? Call — we cover the full four-county area and can often work you in on a zone day.</p>
+</section>
+
+<section class="wrap">
+  <div class="cta">
+    <h2>Stop Guessing. Start Knowing.</h2>
+    <p>One scan can save you a thousand-dollar misdiagnosis. Call or text now and get your answer — usually same week, often same day.</p>
+    <a class="phoneBig" href="tel:8503682285">📞 850-368-2285</a><br>
+    <a class="btn ghost" href="mailto:automedicdiagnostics@gmail.com">automedicdiagnostics@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footGrid">
+      <div>
+        <div class="brand">AUTO<b style="color:var(--red)">MEDIC</b> DIAGNOSTICS</div>
+        <div style="margin-top:6px">We Give Answers, Not Codes.</div>
+      </div>
+      <div>
+        <div><a href="tel:8503682285">850-368-2285</a></div>
+        <div><a href="mailto:automedicdiagnostics@gmail.com">automedicdiagnostics@gmail.com</a></div>
+        <div><a href="https://fb.com/AutoMedicDiagnostics" rel="noopener">Facebook: AutoMedic Diagnostics</a></div>
+        <div><a href="/app.html">Technician Portal</a></div>
+      </div>
+    </div>
+    <p class="footScope">AutoMedic Diagnostics provides mobile diagnostic testing, scanner data review, and reporting only. No mechanical repairs, no under-hood work, no under-car work. Final repair decisions should be verified by your repair facility. Serving Okaloosa, Walton, Santa Rosa, and Escambia counties, Florida.</p>
+    <p>© 2026 AutoMedic Diagnostics. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
